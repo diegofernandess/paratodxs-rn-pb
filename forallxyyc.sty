@@ -13,8 +13,8 @@
 \usepackage{tabu}
 
 % % Adaptações para o Português
-\usepackage[english,brazilian]{babel}
 \usepackage[utf8]{inputenc}
+\usepackage[english,brazilian]{babel}
 
 %RZ: typefaces 
 
@@ -180,7 +180,7 @@
 \newcommand*{\closentuple}{\rangle}
 \newcommand*{\ntuple}[1]{\ensuremath{\mathopen{\openntuple}}#1\ensuremath{\mathclose{\closentuple}}} 
 % definitions
-\newcommand*{\define}[1]{\textsc{\lowercase{\color{leadbeater}#1}}}
+\newcommand*{\define}[1]{\textsc{\MakeLowercase{\color{leadbeater}#1}}} %% \lowercase é uma função básica do tex e não aceita acentos.
 
 %    ****************************************
 %    *          LIST  ENVIRONMENTS          *

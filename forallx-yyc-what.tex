@@ -7,13 +7,7 @@
 \chapter{Argumentos}
 \label{s:Arguments}
 
-O assunto da lógica é a avaliação de argumentos; a identificação dos bons argumentos, separando-os dos maus.  
-
-Na linguagem do dia a dia, às vezes usamos a palavra `argumento' para falar de bate-bocas e desacordos verbais.
-Se você e um amigo discutem nesse sentido, as coisas não estão indo bem entre vocês dois.
-Não é este o sentido da palavra `argumento' no âmbito da lógica. Estes bate-bocas não são argumentos no sentido lógico. São apenas desacordos.
-
-Um argumento, no sentido em que empregaremos aqui, é algo mais parecido com isto:
+O assunto da lógica é a avaliação de argumentos; a identificação dos bons argumentos, separando-os dos maus.  Um argumento, no sentido em que empregaremos aqui, é algo parecido com isto:
 
 	\begin{earg}\label{argButlerGardner}
 		\item[] Ou foi o mordomo, ou foi o jardineiro.
@@ -54,9 +48,9 @@ As expressões abaixo são frequentemente usadas para indicar a conclusão de um
 	\begin{center}
 		logo\\ portanto\\ por conseguinte\\ sendo assim\\ assim\\ deste modo\\ por isso\\ em vista disso\\ isto (prova/mostra/demonstra) que\\ desta forma\\ consequentemente
 	\end{center}
-Por esse motivo são, às vezes, chamadas de \define{express{\~o}es indicativas de conslus{\~a}o}.
+Por esse motivo são, às vezes, chamadas de \define{expressões indicativas de conslusão}.
 
-Por outro lado, as expressões abaixo são \define{express{\~o}es indicativas de premissa}, dado que geralmente elas indicam que a frase que as segue é uma premissa e não uma conclusão:
+Por outro lado, as expressões abaixo são \define{expressões indicativas de premissa}, dado que geralmente elas indicam que a frase que as segue é uma premissa e não uma conclusão:
 	\begin{center}
 		porque\\ visto que\\ desde que\\ dado que\\ uma vez que\\ afinal\\ afinal de contas\\ pois\\ assuma que\\ é sabido que\\ por causa de
 	\end{center}
@@ -107,7 +101,7 @@ Uma delas, geralmente a última, é a conclusão, e as outras são as premissas.
 Se as premissas são verdadeiras e o argumento é bom, então você tem um motivo para aceitar a conclusão.
 
 Na lógica, estamos interessados apenas em sentenças que podem figurar como premissas ou conclusões de um argumento, ou seja, sentenças que podem ser verdadeiras ou falsas.
-Portanto, nos restringiremos a sentenças desse tipo e definiremos \define{senten{\c c}a} como frases ou expressões que podem ser verdadeiras ou falsas.
+Portanto, nos restringiremos a sentenças desse tipo e definiremos \define{sentença} como frases ou expressões que podem ser verdadeiras ou falsas.
 
 Não confunda a ideia de uma sentença que pode ser verdadeira ou falsa com a diferença entre fato e opinião.
 Frequentemente, as sentenças que consideramos na lógica expressam coisas que contariam como fatos, tais como ``Kierkegaard era corcunda'' ou ``Kierkegaard gostava de amêndoas''.
@@ -198,7 +192,7 @@ Se a primeira premissa for verdadeira, ou seja, se for verdade que ``ou foi o mo
 E se a segunda premissa também for verdadeira, não ``foi'' o mordomo.
 Isso deixa apenas uma opção: ``foi o jardineiro''. Esta sentença, a conclusão, deve ser verdadeira.
 Então, neste caso, a conclusão se segue das premissas.
-Um argumento que possui esta propriedade é chamado de \define{v{\'a}lido}.
+Um argumento que possui esta propriedade é chamado de \define{válido}.
 
 Um argumento, então, é \emph{válido}, quando em qualquer situação na qual suas premissas são verdadeiras, sua conclusão também é.
 Nós sabemos que o argumento do mordomo e do jardineiro é válido porque mesmo sem saber exatamente do que as sentenças estão falando, podemos ver que em qualquer situação na qual as duas premissas forem verdadeiras, a conclusão também será.
@@ -216,7 +210,7 @@ Aceitar as premissas desse argumento como verdadeiras não descarta a possibilid
 É, portanto, perfeitamente possível que estas sentenças estejam se referindo a uma situação na qual  ambas as premissas são verdadeiras e, no entanto, não ``foi'' o motorista.
 Nesta situação as premissas são verdadeiras, mas a conclusão não é.
 Então, neste segundo argumento, a conclusão não segue das premissas.
-Chamamos de \define{inv{\'a}lido} qualquer argumento em que, como este, a conclusão não se segue das premissas.
+Chamamos de \define{inválido} qualquer argumento em que, como este, a conclusão não se segue das premissas.
 
 Um argumento é, então, inválido, quando suas sentenças podem estar se referindo a uma situação na qual todas as premissas são verdadeiras, mas a conclusão não é.
 Nós sabemos que o argumento do motorista e da babá é inválido porque há situações específicas às quais as sentenças do argumento podem estar se referindo, nas quais as premissas são verdadeiras, mas a conclusão é falsa.
@@ -239,7 +233,7 @@ E a conclusão será uma consequência das premissas se não houver contraexempl
 Diante disso, podemos propor a seguinte definição:
 
 	\factoidbox{
-		Uma sentença $A$ é \define{consequencia} das sentenças $B_1$, \dots, $B_n$ se e somente se não houver nenhuma situação em que $B_1$, \dots, $B_n$ sejam todas verdadeiras e $A$ não seja. (Também dizemos que $A$ \define{se segue de} $B_1$, \dots, $B_n$ ou que $B_1$, \dots, $B_n$ \define{sustentam}~$A$.)
+		Uma sentença $A$ é \define{consequência} das sentenças $B_1$, \dots, $B_n$ se e somente se não houver nenhuma situação em que $B_1$, \dots, $B_n$ sejam todas verdadeiras e $A$ não seja. (Também dizemos que $A$ \define{se segue de} $B_1$, \dots, $B_n$ ou que $B_1$, \dots, $B_n$ \define{sustentam}~$A$.)
 	}
 
 Essa ``definição'' ainda está incompleta. Ela não nos diz o que é uma ``situação'' ou o que significa ser ``verdadeiro em uma situação''.
@@ -251,11 +245,11 @@ Dissemos que argumentos onde a conclusão é uma consequência das premissas sã
 Como já apresentamos uma priemeira aproximação de uma definição de consequência, vamos utilizá-la para registrar as definições de argumento válido e inválido:
 
 	\factoidbox{
-		Um argumento é \define{v{\'a}lido} se e somente se a conclusão é uma consequência das premissas.
+		Um argumento é \define{válido} se e somente se a conclusão é uma consequência das premissas.
 	}
 
 	\factoidbox{
-		Um argumento é \define{inv{\'a}lido} se e somente se ele não é válido, ou seja, se ele possui um contraexemplo.
+		Um argumento é \define{inválido} se e somente se ele não é válido, ou seja, se ele possui um contraexemplo.
 	}
 
 %\newglossaryentry{valid}
@@ -309,8 +303,8 @@ Então, qualquer situação que seria contraexemplo ao argumento, na qual Jussar
 Sob esta suposição o argumento não terá qualquer contraexemplo e, portanto, será válido.
 
 Dependendo dos tipos de cenários que consideramos aceitáveis como situações que representam contra-exemplos, chegaremos a diferentes noções de validade e consequência.
-Podemos chamar de \define{nomologicamente valido} um argumento para o qual não há contra-exemplos que não violem as leis da natureza.
-E podemos chamar de \define{conceitualmente valido} um argumento para o qual não há contra-exemplos que não violem as conexões de nossos conceitos.
+Podemos chamar de \define{nomologicamente válido} um argumento para o qual não há contra-exemplos que não violem as leis da natureza.
+E podemos chamar de \define{conceitualmente válido} um argumento para o qual não há contra-exemplos que não violem as conexões de nossos conceitos.
 Estes dois casos nos dão uma primeira e importante lição sobre a lógica.
 Eles mostram que a lógica e suas as noções principais, tais como a validade e a consequência, não é anterior, separada ou prioritária com relação a outros domínios, tais como o domínio da realidade natural e das leis da natureza, e o domínio dos conceitos e significados das sentenças.
 O modo como entendermos e concebermos estes outros domínios poderá interferir e alterar nosso entendimento sobre se um argumento é válido ou não.
@@ -333,7 +327,7 @@ e
 	\item[\therefore] Jussara é uma oftalmologista.
 \end{earg}
 são argumentos válidos. Mas enquanto a validade do primeiro depende do conteúdo (ou seja, o significado de ``oftalmologista'' e ``médico de olhos''), a validade do segundo não depende disso.
-O segundo argumento é \define{formalmente valido}.
+O segundo argumento é \define{formalmente válido}.
 Podemos descrever a ``forma'' desse argumento através de um padrão mais ou menos assim:
 \begin{earg}
 	\item[] $A$ é um $X$ ou um $Y$.
@@ -547,7 +541,7 @@ Essas sentenças são incompatíveis entre si, não podem ser ambas verdadeiras 
 Isso motiva a seguinte definição:
 
 	\factoidbox{
-		As sentenças de um grupo são \define{conjuntamente possiveis} se e somente se houver uma situação em que todas elas sejam verdadeiras.
+		As sentenças de um grupo são \define{conjuntamente possíveis} se e somente se houver uma situação em que todas elas sejam verdadeiras.
 	}
 B1 e B2 são, então, \emph{conjuntamente impossíveis}, ao passo que, as duas sentenças abaixo são conjuntamente possíveis:
 	\begin{ebullet}
@@ -599,7 +593,7 @@ description={A sentence that is neither a \gls{necessary truth} nor a \gls{neces
 
 A sentença \ref{Atautology} é diferente.
 Você não precisa olhar pela janela para saber que ela é verdadeira. Independentemente de como está o tempo, ou está chovendo ou não está.
-Uma sentença como \ref{Atautology} que é incapaz de ser falsa, ou seja, que é verdadeira em qualquer situação, é chamada de \define{verdade necessaria}.
+Uma sentença como \ref{Atautology} que é incapaz de ser falsa, ou seja, que é verdadeira em qualquer situação, é chamada de \define{verdade necessária}.
 
 \newglossaryentry{necessary truth}
 {
@@ -611,7 +605,7 @@ Da mesma forma, você não precisa verificar o clima para saber se a sentença \
 Ela não pode ser verdadeira, tem que ser falsa.
 Pode estar chovendo aqui e não estar chovendo em outro lugar; pode estar chovendo agora, e parar de chover antes mesmo de você terminar de ler esta sentença; mas é impossível que esteja e não esteja chovendo no mesmo lugar e ao mesmo tempo.
 Então, independentemente de como seja o mundo, a sentença \ref{Acontradiction}, que afirma que está e não está chovendo, é falsa.
-Uma sentença como \ref{Acontradiction}, que é incapaz de ser verdadeira, ou seja, que é falsa em qualquer situação, é uma \define{falsidade necessaria}.
+Uma sentença como \ref{Acontradiction}, que é incapaz de ser verdadeira, ou seja, que é falsa em qualquer situação, é uma \define{falsidade necessária}.
 
 \newglossaryentry{necessary falsehood}
 {
@@ -647,17 +641,17 @@ description={A property held by a pair of sentences that, in every case, are eit
 \section*{Sumário das noções lógicas}
 
 \begin{itemize}
-\item Um argumento é \define{valido} se não houver nenhuma situação em que as premissas sejam todas verdadeiras e a conclusão não seja; é \define{invalido} caso contrário.
+	\item Um argumento é \define{válido} se não houver nenhuma situação em que as premissas sejam todas verdadeiras e a conclusão não seja; é \define{inválido} caso contrário.
 
-\item Uma \define{verdade necessaria} é uma sentença verdadeira em todas as situações.
+\item Uma \define{verdade necessária} é uma sentença verdadeira em todas as situações.
 
-\item Uma \define{falsidade necessaria} é uma sentença que é falsa em todas as situações.
+\item Uma \define{falsidade necessária} é uma sentença que é falsa em todas as situações.
 
-\item Uma \define{sentenca contingente} não é nem uma verdade necessária nem uma falsidade necessária; é verdadeira em algumas situações e falsa em outras.
+\item Uma \define{sentença contingente} não é nem uma verdade necessária nem uma falsidade necessária; é verdadeira em algumas situações e falsa em outras.
 
 \item Duas sentenças são \define{necessariamente equivalentes} se, em qualquer situação, têm o mesmo valor de verdade; ou são ambas verdadeiras ou ambas falsas.
 
-\item Uma coleção de sentenças é \define{conjuntamente possivel} se houver uma situação em que todas sejam verdadeiras; e é \define{conjuntamente impossivel} caso contrário.
+\item Uma coleção de sentenças é \define{conjuntamente possível} se houver uma situação em que todas sejam verdadeiras; e é \define{conjuntamente impossivel} caso contrário.
 \end{itemize}
 
 
