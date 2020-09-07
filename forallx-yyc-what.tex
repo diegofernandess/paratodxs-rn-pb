@@ -207,17 +207,32 @@ Aqui também não temos ideia do que, especificamente, está sendo dito.
 No entanto, você provavelmente concorda que esse argumento é diferente do anterior em um aspecto importante.
 Mesmo que suas premissas sejam ambas verdadeiras, não é garantido que a conclusão também será.
 Aceitar as premissas desse argumento como verdadeiras não descarta a possibilidade de que ``foi'' outra pessoa diferente da babá e do motorista.
-É, portanto, perfeitamente possível que estas sentenças estejam se referindo a uma situação na qual  ambas as premissas são verdadeiras e, no entanto, não ``foi'' o motorista.
+É, portanto, perfeitamente possível encontrar uma situação na qual  ambas as premissas são verdadeiras e, no entanto, não ``foi'' o motorista.
 Nesta situação as premissas são verdadeiras, mas a conclusão não é.
 Então, neste segundo argumento, a conclusão não segue das premissas.
 Chamamos de \define{inválido} qualquer argumento em que, como este, a conclusão não se segue das premissas.
 
-Um argumento é, então, inválido, quando suas sentenças podem estar se referindo a uma situação na qual todas as premissas são verdadeiras, mas a conclusão não é.
-Nós sabemos que o argumento do motorista e da babá é inválido porque há situações específicas às quais as sentenças do argumento podem estar se referindo, nas quais as premissas são verdadeiras, mas a conclusão é falsa.
+Um argumento é, então, inválido, quando existe uma  situação na qual todas as premissas são verdadeiras, mas a conclusão não é.
+Nós sabemos que o argumento do motorista e da babá é inválido porque é possível encontrar uma situação em que as premissas são verdadeiras, mas a conclusão é falsa.
 Uma destas situações ocorre quando, por exemplo, ``foi'' significa ``foi a última pessoa a deixar a mansão na noite de ontem'', e quando, além disso, ontem, a última pessoa que deixou a mansão foi o jardineiro.
 Como o jardineiro foi o último a deixar a mansão ontem, então a conclusão, que diz que foi o motorista, é falsa, e segunda premissa, que diz que não foi a babá, é verdadeira.
 E a primeira premissa é verdadeira porque se tivesse sido o motorista o último a deixar a mansão, certamente não teria sido a babá.
 Então, há uma situação onde as duas premissas do argumento são verdadeiras, mas a conclusão é falsa e, portanto, o argumento é inválido.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \section{Situações e tipos de validade}
@@ -310,63 +325,120 @@ Eles mostram que a lógica e suas as noções principais, tais como a validade e
 O modo como entendermos e concebermos estes outros domínios poderá interferir e alterar nosso entendimento sobre se um argumento é válido ou não.
 
 
-\section{Validade Formal}
+\section{Validade Formal}\label{s:ValidityInVirtueOfForm}
 
-Uma característica distintiva da consequência \emph{lógica} é que ela não deve depender do conteúdo das premissas e conclusões, mas apenas de sua forma lógica.
-Em outras palavras, como lógicos, queremos desenvolver uma teoria que possa fazer distinções ainda mais finas. Por exemplo, ambos os argumentos
+
+Vamos estudar agora um tipo de validade muito mais estrito que os tipos mencionados acima. Considere este argumento:
+	\begin{earg}
+		\item[] Chove lá fora.
+		\item[] Se chove lá fora, então Sheila está melancólica.
+		\item[\therefore] Sheila está melancólica.
+	\end{earg}
+e este outro também:
+	\begin{earg}
+		\item[] Márcia é uma sindicalista anarquista.
+		\item[] Se Márcia é uma sindicalista anarquista, então Sílvio é um ávido leitor de Tolstoy.
+		\item[\therefore] Sílvio é um ávido leitor de Tolstoy.
+	\end{earg}
+Ambos os argumentos são válidos, pois não é possível encontrar uma situação em que as premissas de cada um são verdadeiras e as respectivas conclusões falsas. 
+Não é difícil notar que eles têm uma estrutura comum, que pode ser expressada assim:
+	\begin{earg}
+		\item[] $A$
+		\item[] Se $A$, então $C$
+		\item[\therefore] $C$
+	\end{earg}
+
+De fato, se quaisquer sentenças declarativas forem substituídas por $A$ e $C$, nos respectivos lugares, o argumento resultante será válido. 
+Vejamos outro par de argumentos:
+	\begin{earg}
+		\item[] Raquel está lendo Platão ou estudando lógica
+		\item[] Raquel não está lendo Platão.
+		\item[\therefore] Raquel está estudando lógica.
+	\end{earg}
+	
+	\begin{earg}
+		\item[] Cláudia está no escritório ou está no saguão
+		\item[] Cláudia não está no saguão.
+		\item[\therefore] Cláudia está no escritório.
+	\end{earg}
+
+Esses argumentos também são válidos.
+Sua estrutura pode ser representada como:
+	\begin{earg}
+		\item[] $A$ ou $B$
+		\item[] não-$A$
+		\item[\therefore] $B$
+	\end{earg}
+
+Um último exemplo:
+	\begin{earg}
+		\item[] Não é o caso que Leonardo fez ambos, atuou em vários filmes e estudou muito.
+		\item[] Leonardo atuou em vários filmes.
+		\item[\therefore] Leonardo não estudou muito.
+	\end{earg}
+Este argumento também é válido e tem uma estrutura que poderíamos representar como:
+	\begin{earg}
+		\item[] não-($A$ e $B$)
+		\item[] $A$
+		\item[\therefore] não-$B$
+	\end{earg}
+Uma vez que \emph{todos} os argumentos tendo a primeira, segunda ou terceira forma são válidos, a validade deles não provém dos significados das sentenças que os constituem, como `Sheila está melancólica', `Chove lá fora `Sílvio é um ávido leitor de Tolstoi', etc.
+A validade provém dos significados das expressões  `e', `ou', `não' e `se \ldots, então\ldots', que  são denominadas \define{operadores lógicos}. 
+A sentença esquemática ``$A$ ou $B$'' é \define{uma forma lógica} da sentença ``Cláudia está no escritório ou no saguão''.\footnote{Como veremos adiante, a seleção de uma ou outra noção de forma lógica é feita por meio de considerações sobre o que é ou não pertinente para capturar a validade de um argumento.}
+Assim, esses argumentos são \emph{válidos em virtude de sua forma lógica}, ou simplesmente \emph{válidos formalmente}. 
+
+Podemos chamar de \define{formalmente válido} um argumento para o qual não há contra-exemplos que violem os significados dos operadores lógicos.
+Portanto, as situações que são consideradas na noção de validade formal são as mais variadas possíveis, respeitando apenas uma condição: que o significado dos operadores lógicos ocorrendo nas premissas e conclusão seja preservado em cada uma delas. 
+Vejamos um exemplo, seja o argumento 
 
 \begin{earg}
 	\item[] Jussara é uma oftalmologista ou uma dentista.
 	\item[] Jussara não é uma dentista.
-	\item[\therefore] Jussara é uma médica de olhos.
+	\item[\therefore] Jussara é uma oculista.
 \end{earg}
-e
+A seguinte forma lógica que poderia lhe ser atribuída
 \begin{earg}
-	\item[] Jussara é uma oftalmologista ou uma dentista.
-	\item[] Jussara não é uma dentista.
-	\item[\therefore] Jussara é uma oftalmologista.
+	\item[] $A$  ou  $Y$.
+	\item[] não-$Y$.
+	\item[\therefore] $Z$.
 \end{earg}
-são argumentos válidos. Mas enquanto a validade do primeiro depende do conteúdo (ou seja, o significado de ``oftalmologista'' e ``médico de olhos''), a validade do segundo não depende disso.
-O segundo argumento é \define{formalmente válido}.
-Podemos descrever a ``forma'' desse argumento através de um padrão mais ou menos assim:
-\begin{earg}
-	\item[] $A$ é um $X$ ou um $Y$.
-	\item[] $A$ não é um $Y$.
-	\item[\therefore] $A$ é um $X$.
-\end{earg}
-Aqui, $A$, $X$ e $Y$ funcionam como espaços reservados para expressões apropriadas que, quando substituem $A$, $X$ e $Y$, transformam este padrão em um argumento de fato, constituído por sentenças.
-Por exemplo,
-\begin{earg}
-	\item[] Edna é uma matemática ou uma bióloga.
-	\item[] Edna não é uma bióloga.
-	\item[\therefore] Edna é uma matemática.
-\end{earg}
-é um argumento com esta mesma forma que o padrão acima descreve.
-Já o primeiro argumento sobre Jussara, da página anterior, não.
-Porque nele há duas expressões diferentes substituindo $Y$: ``oftalmologista'' e ``médica de olhos''.
-
-Mais ainda, este primeiro argumento não é formalmente válido. \emph{sua} forma é:
-\begin{earg}
-	\item[] $A$ é um $X$ ou um $Y$.
-	\item[] $A$ não é um $Y$.
-	\item[\therefore] $A$ é um $Z$.
-\end{earg}
-Quando substituímos, neste padrão, $X$ por ``oftalmologista'' e $Z$ por ``médica de olhos'', obtemos o primeiro argumento original.
-Mas eis aqui um outro argumento com esta mesma forma:
+O argumento acima é válido conceitualmente mas não formalmente,  pois é possível encontrar contra-exemplos com a mesma forma lógica, nos quais as premissas são verdadeiras e a conclusão falsa, por exemplo: 
 \begin{earg}
 	\item[] Edna é uma matemática ou uma bióloga.
 	\item[] Edna não é uma bióloga.
 	\item[\therefore] Edna é uma trapezista.
 \end{earg}
-Este argumento claramente não é válido, uma vez que podemos imaginar (uma situação em que há) uma matemática chamada Edna que não é uma trapezista nem uma bióloga.
-Nesta situação as duas premissas são verdadeiras, mas a conclusão não é, e o argumento, por isso, não é válido.
 
-Nossa estratégia, enquanto lógicos, será a de apresentar uma noção de ``situação'' na qual um argumento se torne válido se ele for formalmente válido.
-Claramente, essa noção de ``situação'' violará não apenas algumas leis da natureza, mas algumas regras da língua portuguesa.
-Como o primeiro argumento desta seção é inválido nesse sentido formal, devemos admitir como contraexemplo uma situação em que Jussara é uma oftalmologista, mas não uma médica de olhos.
-Esta situação não é conceitualmente concebível: ela é descartada pelos significados de ``oftalmologista'' e ``médica de olhos''.
+O que acontece no caso do argumento sobre a Jussara é que a sua validade depende, além do significado dos termos lógicos, também do significado dos termos ``oftalmologista'' e ``oculista''. 
+Pode-se inclusive considerar que isso consta como uma espécie de premissa oculta, que diz ``se Jussara é uma oftalmologista, então ela é oculista''.
+Se essa premissa oculta for adicionada ao argumento, a forma resultante seria 
+\begin{earg}
+	\item[] Se $A$, então $Z$
+	\item[] $A$  ou  $Y$.
+	\item[] não-$Y$.
+	\item[\therefore] $Z$.
+\end{earg}
+e teríamos então um argumento formalmente válido. 
 
-Faremos algumas suposições sobre os diversos tipos diferentes de situações que admitiremos na análise da validade de um argumento.
+Por isso a noção de validade formal é mais básica: um argumento válido de acordo com outras noções, pode ser transformado em um argumento válido formalmente, adicionando premissas extras. Vejamos mais um exemplo:
+	\begin{earg}
+		\item[] Morgana gosta de macaxeira.
+		\item[\therefore] Morgana gosta de aipim.
+	\end{earg}
+É impossível que a premissa seja verdadeira e a conclusão falsa.
+Portanto, o argumento é válido.
+Repare que a validade não está relacionada à forma do argumento.
+No entanto, se adicionarmos a premissa extra ``Se Morgana gosta de macaxeira, ela gosta de aipim'', que explicita a relação entre os conceitos ``macaxeira'' e ``aipim'', o argumento se torna formalmente válido.
+
+
+
+%Nas Partes \ref{ch.TFL}, \ref{ch.TruthTables} e \ref{ch.NDTFL} deste livro, vamos desenvolver uma linguagem formal que nos permitirá simbolizar muitos argumentos de tal modo que poderemos mostrar que eles são válidos em virtude de sua forma.
+%Essa linguagem será a \emph{lógica verofuncional}, ou LVF.
+
+
+
+Sendo assim, o exceto em algumas considerações pontuais explicitamente indicadas (e.g. em \ref{s:BasicNotions}), o foco passará a ser noção de validade formal e a categoria de situações a ser considerada será a mais ampla possível, desde que respeite o significado dos operadores lógicos. 
+Faremos mais algumas suposições sobre os diversos tipos diferentes de situações que admitiremos na análise da validade de um argumento.
 A primeira suposição é que toda situação admissível tem que ser capaz de determinar a verdade ou não de cada sentença do argumento em consideração.
 Isso significa, em primeiro lugar, que não será aceito como uma situação admissível para um possível contra-exermplo, qualquer cenário imaginário no qual a verdade ou não de alguma sentença do argumento considerado não seja determinada.
 Por exemplo, um cenário em que Jussara é dentista, mas não oftalmologista, contará como uma situação a ser considerada nos primeiros argumentos desta seção, mas não como uma situação a ser considerada nos últimos dois argumentos:
@@ -543,10 +615,10 @@ Isso motiva a seguinte definição:
 	\factoidbox{
 		As sentenças de um grupo são \define{conjuntamente possíveis} se e somente se houver uma situação em que todas elas sejam verdadeiras.
 	}
-B1 e B2 são, então, \emph{conjuntamente impossíveis}, ao passo que, as duas sentenças abaixo são conjuntamente possíveis:
+B1 e B2 são, então, \emph{conjuntamente impossíveis}, ao passo que as duas sentenças abaixo são conjuntamente possíveis:
 	\begin{ebullet}
 		\item[B3.] O único irmão de Joana é mais baixo do que ela.
-		\item[B4.] O único irmão de Joana é mais velho do qu ela.
+		\item[B4.] O único irmão de Joana é mais velho do que ela.
 	\end{ebullet}
 
 \newglossaryentry{possibility}

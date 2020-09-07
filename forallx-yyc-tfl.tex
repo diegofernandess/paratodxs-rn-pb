@@ -1,100 +1,21 @@
 %!TEX root = forallxyyc.tex
 \normalsize
-\part{Lógica verofuncional}
+\part{Lógica Proposicional}
 \label{ch.TFL}
 \addtocontents{toc}{\protect\mbox{}\protect\hrulefill\par}
 
 \chapter{Primeiros passos para a simbolização}
 
-\section{Validade em  virtude da forma}\label{s:ValidityInVirtueOfForm}
-Considere este argumento:
-	\begin{earg}
-		\item[] Chove lá fora.
-		\item[] Se chove lá fora, então Sheila está melancólica.
-		\item[\therefore] Sheila está melancólica.
-	\end{earg}
-e este outro também:
-	\begin{earg}
-		\item[] Márcia é uma sindicalista anarquista.
-		\item[] Se Márcia é uma sindicalista anarquista, então Sílvio é um ávido leitor de Tolstoy.
-		\item[\therefore] Sílvio é um ávido leitor de Tolstoy.
-	\end{earg}
-Ambos os argumentos são válidos e não é difícil notar que eles compartilham uma erstrutura comum, que pode ser expressada assim:
-	\begin{earg}
-		\item[] $A$
-		\item[] Se $A$, então $C$
-		\item[\therefore] $C$
-	\end{earg}
-Esta parece ser uma \emph{estrutura} excelente para um argumento.
-De fato, qualquer argumento com essa \emph{estrutura} será válido.
-E essa não é a única estrutura boa para argumentos.
-Considere um argumento como:
-	\begin{earg}
-		\item[] Raquel está lendo Platão ou estudando lógica
-		\item[] Raquel não está lendo Platão.
-		\item[\therefore] Raquel está estudando lógica.
-	\end{earg}
-Este também é um argumento válido e sua estrutura é algo como:
-	\begin{earg}
-		\item[] $A$ ou $B$
-		\item[] não-$A$
-		\item[\therefore] $B$
-	\end{earg}
-Uma estrutura excelente! Veja este outro exemplo:
-	\begin{earg}
-		\item[] Não é o caso que Leonardo fez ambos, atuou em vários filmes e estudou muito.
-		\item[] Leonardo atuou em vários filmes.
-		\item[\therefore] Leonardo não estudou muito.
-	\end{earg}
-Este argumento também é válido e tem uma estrutura que poderíamos representar como:
-	\begin{earg}
-		\item[] não-($A$ e $B$)
-		\item[] $A$
-		\item[\therefore] não-$B$
-	\end{earg}
-Esses exemplos ilustram uma ideia muito importante, que podemos chamar de \emph{validade em virtude da forma}.
-A validade dos argumentos que acabamos de considerar não tem muito a ver com os significados das expressões em português como 'Sheila está melancólica', 'Sílvio é um ávido leitor de Tolstoi' ou 'Leonardo atuou em vários filmes'.
-Se a validade destes argumentos têm algo a ver com significado, é apenas com os significados de expressões tais como `e', `ou', `não' e `se \ldots, então\ldots'.
+Para poder estabelecer se um argumento é ou não formalmente válido, precisamos de duas coisas: uma noção de \emph{forma lógica}  e uma especificação do que consistirá a validade formal. 
+A escolha de uma certa forma lógica envolve uma seleção de aspectos estruturais das sentenças declarativas, aspectos estes considerados relevantes para a validez, e uma seleção de operadores lógicos.
+Vimos acima alguns operadores lógicos, como `e',`ou', etc. 
+Os aspectos estruturais das sentenças podem ser: sujeito e predicado; nomes e predicados, nomes e relações, etc.  
+Por questões de simplicidade não foi considerado nenhum aspecto estrutural das sentenças nos exemplos dos capítulos anteriores, ou seja, uma sentença como ``Jussara é oftalmologista'' foi considerada como não tendo nenhuma estrutura, sua forma lógica foi representada como $A$.
+Adiante veremos outras noções de forma lógica mais ricas.
+Por agora focaremos na especificação de uma noção de forma lógica e isso se dará pela definição uma \define{linguagem formal}.
+Essa linguagem será a \emph{linguagem proposicional}, ou LP.
+Feito isso, passaremos à segunda etapa de especificar uma noção de validade formal, que consistirá em dar um significado preciso aos operadores lógicos.
 
-Nas Partes \ref{ch.TFL}, \ref{ch.TruthTables} e \ref{ch.NDTFL} deste livro, vamos desenvolver uma linguagem formal que nos permitirá simbolizar muitos argumentos de tal modo que poderemos mostrar que eles são válidos em virtude de sua forma.
-Essa linguagem será a \emph{lógica verofuncional}, ou LVF.
-
-
-\section{Validade por razões especiais}
-Existem, no entanto, inúmeros argumentos que são válidos, mas não por razões relacionadas à sua forma. Vejamos um exemplo:
-	\begin{earg}
-		\item[] Morgana gosta de macaxeira.
-		\item[\therefore] Morgana gosta de aipim.
-	\end{earg}
-É impossível que a premissa seja verdadeira e a conclusão falsa.
-Portanto, o argumento é válido.
-No entanto, a validade não está relacionada à forma do argumento.
-Veja abaixo um argumento inválido com exatamente a mesma forma:
-	\begin{earg}
-		\item[] Morgana gosta de macaxeira.
-		\item[\therefore] Morgana gosta de rapadura.
-	\end{earg}
-Isso poderia sugerir que a validade do primeiro argumento \emph{depende} do significado das palavras `macaxeira' e `aipim'.
-Mas, esteja isso correto ou não, não é apenas a \emph{forma} daquele argumento que o torna válido.
-Considere agora este outro argumento:
-	\begin{earg}
-		\item[] A escultura é toda verde.
-		\item[\therefore] A escultura não é toda vermelha. 
-	\end{earg}
-Novamente, parece impossível que a premissa seja verdadeira e a conclusão falsa, pois nada pode ser todo verde e todo vermelho.
-Portanto, o argumento é válido.
-Mas aqui está um argumento inválido com esta mesma forma:
-	\begin{earg}
-		\item[] A escultura é toda verde.
-		\item[\therefore] A escultura não é toda brilhante.
-	\end{earg}
-Este argumento é inválido, pois é possível que uma coisa seja toda verde e toda brilhante também.
-(Pode-se, por exemplo, pintar as unhas com um elegante esmalte verde brilhante.)
-A validade do primeiro argumento parece estar relacionada com a maneira como as cores (ou as palavras-que-designam-cores) interagem.
-Mas, seja isso correto ou não, não é simplesmente a \emph{forma} daquele argumento que o torna válido.
-
-A conclusão importante a ser tirada aqui é a seguinte:
-\emph{Na melhor das hipóteses, a lógica verofuncional (LVF) nos ajudará a entender argumentos válidos devido à sua forma.}
 
 
 \section{Sentenças atômicas}
@@ -102,10 +23,10 @@ A conclusão importante a ser tirada aqui é a seguinte:
 Na Seção \ref{s:ValidityInVirtueOfForm} começamos a isolar a forma de um argumento substituindo \emph{subsentenças} de sentenças por letras específicas.
 Assim, no primeiro exemplo daquela seção, `chove lá fora' é uma subsentença de `Se chove lá fora, então Sheila está melancólica', e substituímos essa subsentença por `$A$'.
 
-Nossa linguagem artificial, a LVF (lógica verofuncional), leva a cabo essa ideia de forma absolutamente implacável.
+Nossa linguagem artificial, a LP (linguagem proposicional), leva a cabo essa ideia de forma absolutamente implacável.
 Seu componente mais básico é uma coleção destas letras que chamaremos de \emph{letras sentenciais}.
 Elas serão os blocos de construção básicos a partir dos quais sentenças mais complexas são construídas.
-Usaremos as letras maiúsculas do alfabeto como letras sentenciais da LVF.
+Usaremos as letras maiúsculas do alfabeto como letras sentenciais da LP.
 Existem apenas 26 letras diferentes, mas não há limite para o número de letras sentenciais que podemos querer considerar.
 Obtemos novas letras sentenciais adicionando subíndices às letras do alfabeto.
 Por exemplo, abaixo temos cinco letras sentenciais diferentes:
@@ -117,14 +38,14 @@ Para fazer isso, precisamos fornecer uma \define{chave de simbolizacao}, tal com
 		\item[C] Sheila está melancólica
 	\end{ekey}
 Ao fazer isso, não estamos fixando essa chave simbolização \emph{para sempre}.
-Estamos apenas dizendo que, por enquanto, usaremos a letra sentencial `$A$'  da LVF para simbolizar a sentença em português `Chove lá fora', e a letra sentencial `$C$' para simbolizar a sentença `Sheila está melancólica'.
+Estamos apenas dizendo que, por enquanto, usaremos a letra sentencial `$A$'  da LP para simbolizar a sentença em português `Chove lá fora', e a letra sentencial `$C$' para simbolizar a sentença `Sheila está melancólica'.
 Mais tarde, quando estivermos lidando com sentenças diferentes ou argumentos diferentes, poderemos fornecer uma nova chave de simbolização, tal como:
 	\begin{ekey}
 		\item[A] Márcia é uma sindicalista anarquista
 		\item[C] Sílvio é um ávido leitor de Tolstoy
 	\end{ekey}
-É importante entender que qualquer que seja a estrutura interna que uma sentença em português possa ter, esta estrutura é perdida quando a sentença é simbolizada por uma letra sentencial da LVF.
-Do ponto de vista da LVF, uma letra sentencial é apenas uma letra.
+É importante entender que qualquer que seja a estrutura interna que uma sentença em português possa ter, esta estrutura é perdida quando a sentença é simbolizada por uma letra sentencial da LP.
+Do ponto de vista da LP, uma letra sentencial é apenas uma letra.
 Ela pode ser usada para criar sentenças mais complexas, mas não pode ser desmontada.
 
 \newglossaryentry{sentence letter}
@@ -148,11 +69,11 @@ description={A list that shows which English sentences are represented by which 
 \chapter{Conectivos}
 \label{s:TFLConnectives}
 
-No capítulo anterior, propusemos simbolizar as sentenças básicas do português através das letras sentenciais da lógica verofuncional (LVF).
+No capítulo anterior, propusemos simbolizar as sentenças básicas do português através das letras sentenciais da linguagem proposicional (LP).
 Neste capítulo veremos como simbolizar as expressões `e', `ou', `não',\ldots\ 
 que normalmente ligam, conectam as sentenças.
-As suas simbolizações na LVF são, por esta razão, chamadas de \emph{conectivos}.
-Usaremos os conectivos lógicos para criar sentenças complexas a partir de componentes atômicos. Existem cinco conectivos na LVF.
+As suas simbolizações na LP são, por esta razão, chamadas de \emph{conectivos}.
+Usaremos os conectivos lógicos para criar sentenças complexas a partir de componentes atômicos. Existem cinco conectivos na LP.
 A tabela a seguir os resume e a explicação de cada um deles será dada nas seções seguintes.
 
 
@@ -179,7 +100,7 @@ description={A logical operator in TFL used to combine \glspl{sentence letter} i
 Esses não são os únicos conectivos do português que interessam.
 Outros são, por exemplo, `a menos que', `nem\ldots{}nem\ldots' e `porque'.
 Veremos que os dois primeiros podem ser expressos através dos conectivos da tabela acima, enquanto o último não pode.
-`Porque', diferentemente dos outros, não é um conectivo \emph{verofuncional}.
+`Porque', diferentemente dos outros, não é um conectivo \emph{proposicional}.
         
 \section{Negação}
 
@@ -232,7 +153,7 @@ Passando para a sentença \ref{not5}, dizer que o dispositivo é insubstituível
 Portanto, mesmo que a sentença \ref{not5} não contenha a palavra `não', nós a simbolizaremos da seguinte forma: $$\enot S$$
 A sentença \ref{not5b} pode ser parafraseada como `Não é o caso que o dispositivo seja insubstituível.'
 E esta paráfrase pode novamente ser parafraseada como `Não é o caso que não é o caso que o dispositivo seja substituível'.
-Portanto, podemos simbolizar essa sentença na LVF como:
+Portanto, podemos simbolizar essa sentença na LP como:
 $$\enot\enot S$$
 As sentenças \ref{not4} a \ref{not5b} acima podem, então, ser simbolizadas como:
 	\begin{ekey}
@@ -255,9 +176,9 @@ No entanto, seria um erro simbolizar a sentença \ref{not7} como `$\enot{F}$'.
 Porque a sentença \ref{not7} diz que Glória está infeliz.
 Mas isso não é o mesmo que `Não é o caso que Glória está feliz'.
 Glória pode, por exemplo, estar estudando lógica, e não estar nem feliz nem infeliz, mas em um estado  de plácida indiferença.
-Como `estar infeliz' não significa o mesmo que `não estar feliz', então, para simbolizar a sentença \ref{not7}, precisamos de uma nova letra sentencial da LVF.
+Como `estar infeliz' não significa o mesmo que `não estar feliz', então, para simbolizar a sentença \ref{not7}, precisamos de uma nova letra sentencial da LP.
 
-As sentenças \ref{not6} e \ref{not7} acima são melhor simbolizadas na LVF como:
+As sentenças \ref{not6} e \ref{not7} acima são melhor simbolizadas na LP como:
 	\begin{ekey}
 		\item[F] Glória está feliz.
 		\item[I] Glória está infeliz.
@@ -301,7 +222,7 @@ Resumindo, simbolizamos as sentenças  \ref{and1} a \ref{and3} acima como:
 	\end{ekey}
 Observe que não fizemos nenhuma tentativa de simbolizar a expressão `além disso' na sentença \ref{and3}.
 Expressões como `além disso', `ambos' e `também' funcionam para chamar nossa atenção para o fato de que duas coisas estão sendo conjuntamente ditas.
-Talvez elas afetem a ênfase de uma frase, mas a ênfase é algo que em geral não interfere na validade ou não de um argumento e não é considerada na LVF.
+Talvez elas afetem a ênfase de uma frase, mas a ênfase é algo que em geral não interfere na validade ou não de um argumento e não é considerada na LP.
 
 \newglossaryentry{conjunction}
 {
@@ -345,7 +266,7 @@ Podemos então usar a seguinte chave
 		\item[B_1] Bárbara é saxofonista.
 		\item[R] Renata é saxofonista.
 	\end{ekey}
-e simbolizar \ref{and5} na LVF como
+e simbolizar \ref{and5} na LP como
 $$(B_1 \eand R)$$
 A sentença \ref {and6} é um pouco mais complicada.
 A palavra ``embora'' estabelece um contraste entre a primeira parte da frase e a segunda parte.
@@ -357,14 +278,14 @@ Como já propusemos a chave de que $B_1$ simboliza ``Bárbara é saxofonista'', 
 	\begin{ekey}
 		\item[C_1] Bárbara é canhota.
 	\end{ekey}
-Agora, finalmente, usamos a paráfrase acima para simbolizar a sentença \ref{and6} como a seguinte sentença da LVF:
+Agora, finalmente, usamos a paráfrase acima para simbolizar a sentença \ref{and6} como a seguinte sentença da LP:
 $$(B_1 \eand \enot C_1)$$
 Observe que perdemos todos as nuances da sentença original em português nessa simbolização.
-Existe uma clara diferença de tom, ênfase, entre a sentença `Embora Bárbara seja saxofonista, ela não é canhota' (a sentença \ref{and6}) e `Bárbara é saxofonista e não é o caso de que Bárbara é canhota' (a paráfrase que fizemos para simbolizá-la na LVF).
-A LVF não preserva (e não pode) preservar esse tipo nuance.
+Existe uma clara diferença de tom, ênfase, entre a sentença `Embora Bárbara seja saxofonista, ela não é canhota' (a sentença \ref{and6}) e `Bárbara é saxofonista e não é o caso de que Bárbara é canhota' (a paráfrase que fizemos para simbolizá-la na LP).
+A LP não preserva (e não pode) preservar esse tipo nuance.
 
 A sentença \ref{and7} levanta questões semelhantes.
-Existe um claro contraste entre o que é dito de Romeu com o que é dito de Bárbara, mas isso não é algo com o qual a LVF consiga lidar.
+Existe um claro contraste entre o que é dito de Romeu com o que é dito de Bárbara, mas isso não é algo com o qual a LP consiga lidar.
 Assim, podemos parafrasear \ref{and7} como `Romeu é compreensivo \emph{e} Bárbara é mais compreensiva que Romeu'.
 (Observe que mais uma vez substituímos, em nossa paráfrase, um pronome [ele] por um nome [Romeu].)
 Considere a seguinte chave de simbolização:
@@ -425,7 +346,7 @@ Podemos, para estas sentenças, usar a seguinte chave de simbolização:
 		\item[T] Fátima vai assistir TV.
 	\end{ekey}
 A sentença \ref{or1} diz, aproximadamente, que `$F$ ou $T$'.
-Usaremos um símbolo novo da LVF para simbolizar este `ou'.
+Usaremos um símbolo novo da LP para simbolizar este `ou'.
 É o símbolo `$\eor$' que na tabela da página 31 foi chamado de \define{disjuncao}. 
 A sentença \ref{or1} é, então, simbolizada como:
 $$(F \eor T)$$
@@ -462,8 +383,8 @@ Outras vezes, a palavra `ou' permite a possibilidade de ambos os disjuntos serem
 Este é provavelmente o caso da sentença \ref{or2}, acima.
 Fátima pode jogar sozinha, Omar pode jogar sozinho, ou os dois podem jogar.
 A sentença \ref{or2} apenas diz que \emph{pelo menos} um deles vai jogar videogame. Isso é chamado de \define{ou inclusivo}.
-Na lógica, adotou-se a convenção de que o símbolo `\eor' da LVF sempre simboliza um \emph{ou inclusivo}.
-Abaixo veremos como simbolizar um ou exclusivo na LVF usando os símbolos que já vimos `$\eor$', `$\eand$' e `$\enot$'.
+Na lógica, adotou-se a convenção de que o símbolo `\eor' da LP sempre simboliza um \emph{ou inclusivo}.
+Abaixo veremos como simbolizar um ou exclusivo na LP usando os símbolos que já vimos `$\eor$', `$\eand$' e `$\enot$'.
 
 Vejamos como a negação interage com a disjunção. Considere:
 	\begin{earg}
@@ -479,7 +400,7 @@ Usando a mesma chave de simbolização apresentada anteriormente,
 	\end{ekey}
 a sentença \ref{or3} pode ser parafraseada da seguinte forma:
 `\emph{Não é o caso de que} você beberá refrigerante ou \emph{não é o caso de que} você beberá suco'.
-Para simbolizar isso na LVF precisamos da disjunção e da negação.
+Para simbolizar isso na LP precisamos da disjunção e da negação.
 `Não é o caso de que você beberá refrigerante' é simbolizado por `$\enot S_1$'. `Não é o caso de que você beberá suco' é simbolizado por `$\enot S_2$'. Portanto, a sentença \ref{or3} é simbolizada como:
 $$(\enot S_1 \eor \enot S_2)$$
 A sentença \ref{or4} também requer a negação para ser simbolizada.
@@ -488,7 +409,7 @@ Ela pode ser parafraseada como:
 Como isso nega toda a disjunção, simbolizamos a sentença \ref{or4} como:\footnote{
 	Uma outra possibilidade aceitável para parafrasear \ref{or4}, que talvez seja até mais natural, é a seguinte:
 	`\emph{Não é o caso de que} você beberá refrigerante \textbf{e} \emph{não é o caso de que} você beberá suco'. Neste caso a simbolização da sentença utilizará a conjunção das negações de cada uma das subsentenças e será: `$(\enot S_1 \eand \enot S_2)$'.
-	Mais adiante veremos que estas duas simbolizações distintas da sentença \ref{or4} como `$\enot(S_1 \eor S_2)$' ou como `$(\enot S_1 \eand \enot S_2)$' são, de uma perspectiva lógica, perfeitamente equivalentes na LVF.}
+	Mais adiante veremos que estas duas simbolizações distintas da sentença \ref{or4} como `$\enot(S_1 \eor S_2)$' ou como `$(\enot S_1 \eand \enot S_2)$' são, de uma perspectiva lógica, perfeitamente equivalentes na LP.}
 $$\enot(S_1 \eor S_2)$$
 A sentença \ref{or.xor} corresponde a uma explicitação clara e não ambígua de um \emph{ou exclusivo}. 
 Podemos dividi-la em duas partes.
@@ -503,7 +424,7 @@ Como vimos anteriormente, a palavra `mas' usada para juntar as duas partes da se
 Então, simbolizamos a sentença \ref{or.xor} como:
 $$((S_1 \eor S_2) \eand \enot (S_1 \eand S_2))$$
 Este último exemplo mostra algo importante.
-Embora o símbolo `\eor' da LVF sempre simbolize o \emph{ou inclusivo}, o \emph{ou exclusivo} pode também ser simbolizado na LVF.
+Embora o símbolo `\eor' da LP sempre simbolize o \emph{ou inclusivo}, o \emph{ou exclusivo} pode também ser simbolizado na LP.
 Nós apenas temos que usar alguns de nossos outros símbolos também.
 
 
@@ -554,7 +475,7 @@ Afinal, não há como Oscar estar em Caicó sem que ele esteja também no Rio Gr
 E isso parece assegurar a verdade de \ref{if1}.
 Por outro lado, reconhecemos a sentença \ref{if2} como falsa porque sabemos que se Oscar estiver em Natal, Mossoró ou Currais Novos, por exemplo, ele estará no Rio Grande do Norte sem estar em Caicó.
 Então não parece verdade que `Oscar está no Rio Grande do Norte apenas se Oscar está em Caicó'.
-Portanto, como \ref{if1} é verdadeira e \ref{if2} é falsa, elas não dizem a mesma coisa e não podem, por isso, ser simbolizadas pela mesma sentença da  LVF.
+Portanto, como \ref{if1} é verdadeira e \ref{if2} é falsa, elas não dizem a mesma coisa e não podem, por isso, ser simbolizadas pela mesma sentença da  LP.
 
 A sentença \ref{if2}, na verdade, pode ser parafraseada como `Se Oscar está no Rio Grande do Norte, então Oscar está em Caicó'.
 Podemos simbolizá-la, então, como:
@@ -575,7 +496,7 @@ Por isso todas elas podem ser simbolizadas como:
 $$(C \eif R)$$
 É importante ter em mente que o conectivo `\eif' diz apenas que, se o antecedente for verdadeiro, o consequente será verdadeiro.
 Ele não diz nada sobre uma possível conexão \emph{causal} entre o antecedente e o consequente.
-De fato, o nosso uso dos condicionais na língua portuguesa é muito rico em informação e sutilezas que não cabem no conectivo `$\eif$' da LVF.
+De fato, o nosso uso dos condicionais na língua portuguesa é muito rico em informação e sutilezas que não cabem no conectivo `$\eif$' da LP.
 Portanto, muito está sendo perdido quando simbolizamos um condicional do português com `$\eif$'.
 Voltaremos a estas questões mais adiante neste livro, nas Seções \ref{s:IndicativeSubjunctive} e \ref{s:ParadoxesOfMaterialConditional}.
 
@@ -614,7 +535,7 @@ description={The symbol \eiff, used to represent words and phrases that function
 }
 
 Poderíamos simbolizar todos os bicondicionais dessa maneira.
-Portanto, assim como não precisamos de um novo símbolo da LVF para lidar com o \emph{ou exclusivo}, também não precisamos de um novo símbolo da LVF para lidar com os bicondicionais.
+Portanto, assim como não precisamos de um novo símbolo da LP para lidar com o \emph{ou exclusivo}, também não precisamos de um novo símbolo da LP para lidar com os bicondicionais.
 Mas como o bicondicional ocorre com bastante frequência, usaremos o símbolo `\eiff' para ele.
 Podemos então simbolizar a sentença \ref{iff3} como:
 $$(A_3 \eiff M_3)$$
@@ -669,7 +590,7 @@ Segundo este princípio devemos simbolizar as sentenças da maneira mais próxim
 
 
 \section{A menos que}
-Os cinco conectivos introduzidos até agora (`$\enot$', `$\eand$', `$\eor$', `$\eif$' e `$\eiff$') correspondem a todos os conectivos da LVF.
+Os cinco conectivos introduzidos até agora (`$\enot$', `$\eand$', `$\eor$', `$\eif$' e `$\eiff$') correspondem a todos os conectivos da LP.
 Podemos, agora, usá-los em conjunto para simbolizar muitos tipos diferentes de sentenças.
 Um caso especialmente difícil é o de sentenças com as expressões sinônimas  `a menos que' e `a não ser que'.
 
@@ -692,7 +613,7 @@ $$(\enot I \eif S)$$
 Além disso, ambas as sentenças também significam que você sairá do sol ou terá uma insolação. Então, também podemos simbolizá-las como:
 $$(S \eor I)$$
 Todas essas três simbolizações estão corretas.
-De fato, no Capítulo \ref{s:SemanticConcepts}, veremos que todas essas três simbolizações são sentenças equivalentes na LVF.
+De fato, no Capítulo \ref{s:SemanticConcepts}, veremos que todas essas três simbolizações são sentenças equivalentes na LP.
 Vamos então, por economia, usar a terceira simbolização, que utiliza menos símbolos, na seguinte regra:
 % TODO: it might be useful to reference exercise 11.F.3 explicitly
 % here, since the point is not discussed in the main text
@@ -714,7 +635,7 @@ Então, aqui também a moral da história é que temos que estar cientes destes 
 
 \practiceproblems
 \solutions
-\problempart Usando a chave a seguir, simbolize cada uma das 6 sentenças abaixo na LVF.\label{pr.monkeysuits}
+\problempart Usando a chave a seguir, simbolize cada uma das 6 sentenças abaixo na LP.\label{pr.monkeysuits}
 	\begin{ekey}
 		\item[H] Essas criaturas são homens de terno. 
 		\item[C] Essas criaturas são chimpanzés.
@@ -729,7 +650,7 @@ Então, aqui também a moral da história é que temos que estar cientes destes 
 	\item A menos que essas criaturas sejam homens de terno, elas são chimpanzés ou gorilas.
 \end{earg}
 
-\problempart Usando a chave a seguir, simbolize cada uma das 12 sentenças abaixo na LVF.
+\problempart Usando a chave a seguir, simbolize cada uma das 12 sentenças abaixo na LP.
 \begin{ekey}
 	\item[A] O Sr. Abel foi assassinado.
 	\item[B] Foi a babá.
@@ -754,7 +675,7 @@ Então, aqui também a moral da história é que temos que estar cientes destes 
 \end{earg}
 \solutions
 
-\problempart Usando a chave a seguir, simbolize cada uma das 12 sentenças abaixo na LVF.\label{pr.avacareer}
+\problempart Usando a chave a seguir, simbolize cada uma das 12 sentenças abaixo na LP.\label{pr.avacareer}
 	\begin{ekey}
 		\item[E_1] Aline é eletricista.
 		\item[E_2] Helena é eletricista.
@@ -779,7 +700,7 @@ Então, aqui também a moral da história é que temos que estar cientes destes 
 	\end{earg}
 
 \problempart
-Usando a chave a seguir, simbolize cada uma das 9 sentenças abaixo na LVF.
+Usando a chave a seguir, simbolize cada uma das 9 sentenças abaixo na LP.
 \label{pr.jazzinstruments}
 \begin{ekey}
 	\item[J_1] John Coltrane tocava sax tenor.
@@ -804,7 +725,7 @@ Usando a chave a seguir, simbolize cada uma das 9 sentenças abaixo na LVF.
 \solutions
 \problempart
 \label{pr.spies}
-Proponha uma chave de simbolização e utilize-a para simbolizar  cada uma das 6 sentenças abaixo na LVF.
+Proponha uma chave de simbolização e utilize-a para simbolizar  cada uma das 6 sentenças abaixo na LP.
 \begin{earg}
 	\item Amália e Betina são espiãs.
 	\item Se Amália ou Betina são espiãs, então o código foi quebrado.
@@ -815,7 +736,7 @@ Proponha uma chave de simbolização e utilize-a para simbolizar  cada uma das 6
 \end{earg}
 
 \solutions
-\problempart Proponha uma chave de simbolização e utilize-a para simbolizar  cada uma das 5 sentenças abaixo na LVF.
+\problempart Proponha uma chave de simbolização e utilize-a para simbolizar  cada uma das 5 sentenças abaixo na LP.
 \begin{earg}
 	\item Se não houver álcool gel na dispensa, então Celso sairá de casa na quarentena.
 	\item Celso sairá de casa na quarentena, a menos que haja álcool gel na dispensa.
@@ -825,7 +746,7 @@ Proponha uma chave de simbolização e utilize-a para simbolizar  cada uma das 6
 \end{earg}
 
 \problempart
-Para cada um dos 3 argumentos abaixo, identifique sua conclusão e suas premissas, proponha uma chave de simbolização e use-a para simbolizar todas as sentenças do argumento na LVF.
+Para cada um dos 3 argumentos abaixo, identifique sua conclusão e suas premissas, proponha uma chave de simbolização e use-a para simbolizar todas as sentenças do argumento na LP.
 \begin{earg}
 	\item Se Danina toca piano de manhã, então Richard acorda irritadiço. Danina toca piano de manhã, a menos que esteja distraída. Portanto, se Richard não acorda irritadiço, Danina deve estar distraída.
 	\item Vai chover ou ventar forte na terça-feira. Se chover, Natália ficará triste. Se ventar forte, Natália ficará descabelada. Portanto, Natália ficará triste ou descabelada na terça-feira.
@@ -833,7 +754,7 @@ Para cada um dos 3 argumentos abaixo, identifique sua conclusão e suas premissa
 \end{earg}
 
 \problempart
-Para cada um dos três argumentos abaixo, identifique sua conclusão e suas premissas, proponha uma chave de simbolização e utilize-a para simbolizar o  argumento da melhor maneira possível na LVF.
+Para cada um dos três argumentos abaixo, identifique sua conclusão e suas premissas, proponha uma chave de simbolização e utilize-a para simbolizar o  argumento da melhor maneira possível na LP.
 Os trechos em \emph{itálico} apenas ajudam a fornecer um contexto para a melhor interpretação do argumento e não precisam ser simbolizados.
 \begin{earg}
 \item Vai chover em breve. Eu sei porque minha perna está doendo, e minha perna dói se vai chover.
@@ -888,16 +809,16 @@ Como você poderia simbolizar o \emph{ou exclusivo} usando apenas dois conectivo
 Existe alguma maneira de simbolizar o \emph{ou exclusivo} usando apenas um conectivo?
 
 
-\chapter{Sentenças da LVF}\label{s:TFLSentences}
-A expressão ``as maçãs são vermelhas ou as jaboticabas são pretas'' é uma sentença em português e a expressão ``$(M \eor J)$'' é uma sentença da LVF.
+\chapter{Sentenças da LP}\label{s:TFLSentences}
+A expressão ``as maçãs são vermelhas ou as jaboticabas são pretas'' é uma sentença em português e a expressão ``$(M \eor J)$'' é uma sentença da LP.
 Embora não tenhamos em geral dificuldades em identificar uma expressão como sendo ou não uma sentença do português, não há uma definição formal que esclareça completamente o que conta como sentença na língua portuguesa.
-Neste capítulo, no entanto, ofereceremos uma \emph{definição} completa do que conta como uma sentença de LVF.
-E esse é um dos motivos pelos quais dizemos que uma linguagem formal como a LVF é mais precisa do que uma linguagem natural como o português.
+Neste capítulo, no entanto, ofereceremos uma \emph{definição} completa do que conta como uma sentença de LP.
+E esse é um dos motivos pelos quais dizemos que uma linguagem formal como a LP é mais precisa do que uma linguagem natural como o português.
 
 
 \section{Expressões}
 
-Vimos que há três tipos diferentes de símbolos na LVF:
+Vimos que há três tipos diferentes de símbolos na LP:
 \begin{center}
 \begin{tabular}{l l}
 Sentenças atômicas: & $A,B,C,\ldots,Z$\\
@@ -908,13 +829,13 @@ Conectivos: & $\enot,\eand,\eor,\eif,\eiff$\\
 Parênteses: &( , )\\
 \end{tabular}
 \end{center}
-Definimos uma \define{expressao da LVF} como qualquer sequência de símbolos da LVF.
-Pegue uma quantidade qualquer de símbolos da LVF e escreva-os, em qualquer ordem, e você terá uma expressão da LVF.
+Definimos uma \define{expressao da LP} como qualquer sequência de símbolos da LP.
+Pegue uma quantidade qualquer de símbolos da LP e escreva-os, em qualquer ordem, e você terá uma expressão da LP.
 
 
 \section{Sentenças}\label{s:Sentences}
-Obviamente, muitas expressões de LVF serão totalmente sem sentido.
-Nós precisamos saber quando uma expressão de LVF constitui uma \emph{sentença}.
+Obviamente, muitas expressões de LP serão totalmente sem sentido.
+Nós precisamos saber quando uma expressão de LP constitui uma \emph{sentença}.
 
 Letras sentenciais individuais tais como `$A$' e `$G_{13}$' devem, claramente, contar como sentenças.
 (Nós as chamaremos de sentenças \emph{atomicas}.)
@@ -926,12 +847,12 @@ As combinações possíveis são infinitas, mesmo começando com apenas essas du
 Portanto, não faz sentido tentar listar todas as sentenças uma por uma.
 
 Em vez disso, descreveremos o processo pelo qual as sentenças podem ser \emph{construídas}.
-Considere a negação: dada qualquer sentença \meta{A} da LVF, $\enot\meta{A}$ é uma sentença da LVF.
+Considere a negação: dada qualquer sentença \meta{A} da LP, $\enot\meta{A}$ é uma sentença da LP.
 (Por que as fontes engraçadas? Trataremos disso na Seção \ref{s:Metavariables}.)
 
-Podemos fazer o mesmo para cada um dos outros conectivos da LVF.
-Por exemplo, se \meta{A} e \meta{B} são sentenças da LVF, então $(\meta{A}\eand\meta{B})$ é uma sentença da LVF.
-Fornecendo cláusulas como essa para todos os conectivos, chegamos à seguinte definição formal para uma \define{sentenca da LVF}:
+Podemos fazer o mesmo para cada um dos outros conectivos da LP.
+Por exemplo, se \meta{A} e \meta{B} são sentenças da LP, então $(\meta{A}\eand\meta{B})$ é uma sentença da LP.
+Fornecendo cláusulas como essa para todos os conectivos, chegamos à seguinte definição formal para uma \define{sentenca da LP}:
 {\small 
 	\factoidbox{\label{TFLsentences}
 	\begin{enumerate}
@@ -952,7 +873,7 @@ description={A string of symbols in TFL that can be built up according to the in
 
 Definições como essa são chamadas \emph{indutivas}.
 As definições indutivas começam com alguns elementos básicos especificáveis e, em seguida, apresentam regras que regulam a geração de novos elementos, combinando os já estabelecidos.
-Na definição de sentença da LVF acima, a cláusula básica é a 1; as cláusulas 2 a 6 correspondem às regras para a geração de novos elementos a partir dos já estabelecidos, e a cláusula 7 é o fechamento, que garante que nada além do que for assim gerado será uma sentença.
+Na definição de sentença da LP acima, a cláusula básica é a 1; as cláusulas 2 a 6 correspondem às regras para a geração de novos elementos a partir dos já estabelecidos, e a cláusula 7 é o fechamento, que garante que nada além do que for assim gerado será uma sentença.
 Para dar a você uma ideia melhor do que é uma definição indutiva, vou definir indutivamente o que é ser \emph{um ancestral meu}.
 A cláusula básica pode ser assim especificada:
 	\begin{ebullet}
@@ -965,19 +886,19 @@ a regra para geração de novos elementos e o fechamento são dados pelas seguin
 	\end{ebullet}
 Usando essa definição, podemos facilmente verificar se alguém é ou não meu ancestral:
 basta verificar se a pessoa é um dos pais de um dos pais de...um dos meus pais.
-O mesmo se aplica à nossa definição indutiva de sentenças de LVF.
+O mesmo se aplica à nossa definição indutiva de sentenças de LP.
 A definição indutiva permite não apenas construir sentenças complexas a partir de partes mais simples, mas permite também verificar se uma expressão qualquer é uma sentença, decompondo-a em partes mais simples. Se ao final chegarmos em letras sentenciais, então a expressão inicial era uma sentença.
 
 Vejamos alguns exemplos.
 
 Suponha que queiramos saber se
 $$\enot\enot\enot D$$
-é ou não uma sentença da LVF.
+é ou não uma sentença da LP.
 Olhando para a segunda cláusula da definição, sabemos que '$\enot\enot\enot D$' será uma sentença \emph{se} `$\enot\enot D$' for uma sentença.
 Então, precisamos agora perguntar se '$\enot\enot D$' é ou não uma sentença.
 Olhando novamente para a segunda cláusula da definição, sabemos que `$\enot\enot D$' será uma sentença \emph{se} `$\enot D$' for.
 E, da mesma forma, `$\enot D$' será uma sentença \emph{se} `$D$' for uma sentença.
-Bem, `$D$' é uma letra sentencial da LVF, então, sabemos que `$D$' é uma sentença por causa da primeira cláusula da definição.
+Bem, `$D$' é uma letra sentencial da LP, então, sabemos que `$D$' é uma sentença por causa da primeira cláusula da definição.
 Portanto, quando partimos de uma sentença composta qualquer, tal como `$\enot\enot\enot D$', e aplicamos a definição repetidamente, nós eventualmente chegaremos às letras sentenciais das quais a sentença é constituída.
 
 Vejamos agora o seguinte exemplo:
@@ -1034,11 +955,11 @@ Os números nos parênteses apenas indicam explicitamente quão internos ou exte
 O conectivo que ocorre no ponto em que a contagem está em $1$ será o mais externo, o envolvido por apenas um par de parênteses.
 Um conectivo que ocorra no ponto em que a contatem está em $3$, por exemplo, é um conectivo envolvido por 3 pares de parênteses.
  
-A estrutura indutiva das sentenças da LVF será importante quando considerarmos as circunstâncias sob as quais uma determinada sentença seria verdadeira ou falsa.
+A estrutura indutiva das sentenças da LP será importante quando considerarmos as circunstâncias sob as quais uma determinada sentença seria verdadeira ou falsa.
 Por exemplo, a sentença `$\enot\enot\enot D$' é verdadeira se e somente se a sentença `$\enot\enot D$' for falsa, e assim por diante, através da estrutura da sentença, até chegarmos aos componentes atômicos.
 Nós estudaremos detalhadamente este ponto mais adiante, nos capítulos da Parte \ref{ch.TruthTables} deste livro.
 
-A estrutura indutiva das sentenças da LVF também nos permite dar uma definição formal da noção de \emph{escopo} de uma negação (mencionado na Seção  \ref{s:ConnectiveConjunction}).
+A estrutura indutiva das sentenças da LP também nos permite dar uma definição formal da noção de \emph{escopo} de uma negação (mencionado na Seção  \ref{s:ConnectiveConjunction}).
 O escopo de um `$\enot$' é a subsentença da qual `$\enot$' é o conectivo principal.
 Considere, por exemplo, a sentença:
 $$(P \eand (\enot (R \eand B) \eiff Q))$$
@@ -1060,9 +981,9 @@ E é mais natural ler isso como significando a mesma coisa que `$(\enot Q \eand 
 Mas já vimos na Seção \ref{s:ConnectiveConjunction}, que isso é muito diferente de `$\enot(Q \eand R)$'.
 
 Estritamente falando, então, `$Q \eand R$' \emph{não} é uma sentença.
-É apenas uma sequência de símbolos da LVF, ou seja, uma \emph{expressão}.
+É apenas uma sequência de símbolos da LP, ou seja, uma \emph{expressão}.
 
-No entanto, em muitas situações em que a LVF é utilizada, as pessoas são menos rigorosas sobre o uso dos parênteses.
+No entanto, em muitas situações em que a LP é utilizada, as pessoas são menos rigorosas sobre o uso dos parênteses.
 Existem algumas convenções que regulam a omissão e a substituição de alguns destes parênteses, que nós precisamos conhecer.
 
 A mais comum delas é a omissão dos parênteses \emph{mais externos} de uma sentença.
@@ -1086,7 +1007,7 @@ A única diferença é que a segunda é um pouco mais fácil de ser lida.
 \solutions
 \problempart
 \label{pr.wiffTFL}
-Para cada uma das $8$ expressões abaixo, decida (a) se ela é uma sentença da LVF, estritamente falando; (b) se é uma sentença da LVF quando permitimos as convenções sobre o uso de parênteses; (c) se ela for uma sentença apontada em (a) ou em (b), indique seu conectivo principal.
+Para cada uma das $8$ expressões abaixo, decida (a) se ela é uma sentença da LP, estritamente falando; (b) se é uma sentença da LP quando permitimos as convenções sobre o uso de parênteses; (c) se ela for uma sentença apontada em (a) ou em (b), indique seu conectivo principal.
 \begin{earg}
 \item $(A)$
 \item $J_{374} \eor \enot J_{374}$
@@ -1099,7 +1020,7 @@ Para cada uma das $8$ expressões abaixo, decida (a) se ela é uma sentença da 
 \end{earg}
 
 \problempart
-Existem sentenças da LVF que não contêm letras sentenciais? Explique sua resposta.
+Existem sentenças da LP que não contêm letras sentenciais? Explique sua resposta.
 
 \problempart
 Qual é o escopo de cada conectivo na sentença abaixo?
@@ -1156,7 +1077,7 @@ As aspas simples, em nosso contexto aqui, indicam que você está deixando de fa
 
 \section{Linguagem objeto e metalinguagem}\label{s:LingObjMeta}
 Essas convenções gerais sobre o uso de aspas são de particular importância para nós.
-Afinal, estamos descrevendo uma linguagem formal aqui, a LVF, e, portanto, muito frequentemente \emph{mencionaremos} as expressões da LVF.
+Afinal, estamos descrevendo uma linguagem formal aqui, a LP, e, portanto, muito frequentemente \emph{mencionaremos} as expressões da LP.
 
 Quando falamos sobre uma linguagem, a linguagem \emph{sobre a qual} estamos falando é chamada de \define {linguagem objeto}.
 E a linguagem \emph{que usamos para falar sobre} a linguagem objeto é chamada de \define{metalinguagem}.
@@ -1174,19 +1095,19 @@ name=metalanguage,
 description={The language logicians use to talk about the object language. In this textbook, the metalanguage is English, supplemented by certain symbols like metavariables and technical terms like ``valid''}
 }
 
-A linguagem objeto que tem nos ocupado até aqui e também nas próximas Partes deste livro é a linguagem formal que estamos desenvolvendo: a LVF.
-Já a metalinguagem, a linguagem que estamos usando para falar da LVF, é o português.
+A linguagem objeto que tem nos ocupado até aqui e também nas próximas Partes deste livro é a linguagem formal que estamos desenvolvendo: a LP.
+Já a metalinguagem, a linguagem que estamos usando para falar da LP, é o português.
 Bem, não exatamente o português de nossas conversas comuns, mas um \emph{português aumentado}, que é suplementado por um vocabulário técnico adicional, que nos ajuda nesta tarefa.
 
-Por exemplo, temos usado as letras maiúsculas como letras sentenciais da LVF:
+Por exemplo, temos usado as letras maiúsculas como letras sentenciais da LP:
 	$$A, B, C, Z, A_1, B_4, A_{25}, J_{375},\ldots$$
-Esta é uma lista de sentenças da linguagem objeto (LVF).
+Esta é uma lista de sentenças da linguagem objeto (LP).
 As letras nesta lista não são sentenças do português.
 Portanto, não devemos dizer, por exemplo:
 	\begin{ebullet}
-		\item $D$ é uma letra sentencial da LVF.
+		\item $D$ é uma letra sentencial da LP.
 	\end{ebullet}
-Estamos, obviamente, tentando criar uma sentença em português que diga algo sobre a linguagem objeto (LVF), mas `$D$' é uma sentença da LVF, e não parte do português.
+Estamos, obviamente, tentando criar uma sentença em português que diga algo sobre a linguagem objeto (LP), mas `$D$' é uma sentença da LP, e não parte do português.
 Portanto, a expressão acima é sem sentido.
 É como se tivéssemos dito algo como:
 	\begin{ebullet}
@@ -1198,31 +1119,31 @@ Mas o que de verdade estamos querendo dizer, neste caso, é:
 	\end{ebullet}
 Da mesma forma, o que pretendíamos dizer acima era apenas:
 	\begin{ebullet}
-		\item `$D$' é uma letra sentencial da LVF.
+		\item `$D$' é uma letra sentencial da LP.
 	\end{ebullet}
-O ponto geral é que, sempre que quisermos falar em português sobre alguma expressão específica da LVF, precisamos indicar que estamos \emph{mencionando} a expressão, em vez de \emph{usando}-a.
+O ponto geral é que, sempre que quisermos falar em português sobre alguma expressão específica da LP, precisamos indicar que estamos \emph{mencionando} a expressão, em vez de \emph{usando}-a.
 Podemos empregar aspas simples ou adotar alguma convenção semelhante, tal como destacar a expressão em uma linha separada, centralizando-a horizontalmente na página.
 Como você já deve ter notado, neste livro estamos utilizando estas duas convenções.
 Então, quando, por exemplo, destacamos uma sentença, tal como $$(A \eand \enot A)$$ que está sem aspas, isolada na linha e centralizada, estamos mencionando-a, tanto quanto em `$(A \eand \enot A)$', onde a sentença está entre aspas simples e acompanha o fluxo do texto.
-Estas duas maneiras de apresentar indicam que a sentença da LVF está sento mencionada, não usada.
-Estamos, nos dois casos, apenas nos referindo, através nossa metalinguagem, o português aumentado, a uma expressão da LVF.
+Estas duas maneiras de apresentar indicam que a sentença da LP está sento mencionada, não usada.
+Estamos, nos dois casos, apenas nos referindo, através nossa metalinguagem, o português aumentado, a uma expressão da LP.
 
 
 \section{Metavariáveis}\label{s:Metavariables}
-Nós, no entanto, não queremos falar apenas sobre expressões \emph{específicas} da LVF. 
-Queremos também poder falar sobre \emph{qualquer sentença arbitrária} da LVF.
-Nós, de fato, já fizemos isso na Seção \ref{s:Sentences}, quando apresentamos a definição indutiva de sentença da LVF.
+Nós, no entanto, não queremos falar apenas sobre expressões \emph{específicas} da LP. 
+Queremos também poder falar sobre \emph{qualquer sentença arbitrária} da LP.
+Nós, de fato, já fizemos isso na Seção \ref{s:Sentences}, quando apresentamos a definição indutiva de sentença da LP.
 Usamos as letras maiúsculas cursivas para fazer isso, a saber:
 	$$\meta{A}, \meta{B}, \meta{C}, \meta{D}, \ldots$$
-Diferentemente das letras sentenciais, essas letras não pertencem à LVF.
-Elas, na verdade, fazem parte da metalinguagem (o português aumentado) que usamos para falar sobre a as expressões da LVF.
-Neste caso, usamos as letras maiúsculas cursivas para nos referir genericamente a uma expressão \emph{qualquer} da LVF.
-Por exemplo, a segunda cláusula da definição indutiva de sentença da LVF foi assim expressada:
+Diferentemente das letras sentenciais, essas letras não pertencem à LP.
+Elas, na verdade, fazem parte da metalinguagem (o português aumentado) que usamos para falar sobre a as expressões da LP.
+Neste caso, usamos as letras maiúsculas cursivas para nos referir genericamente a uma expressão \emph{qualquer} da LP.
+Por exemplo, a segunda cláusula da definição indutiva de sentença da LP foi assim expressada:
 	\begin{earg}
 		\item[2.] Se $\meta{A}$ é uma sentença, então $\enot \meta{A}$ é uma sentença.
 	\end{earg}
-Nesta cláusula, `$\meta{A}$' se refere de modo genérico a uma expressão qualquer da LVF.
-Ela não é uma expressão específica da LVF, como `$A$', mas uma váriável da metalinguagem (metavariável) que se refere genericamente a qualquer expressão da LVF, tal como $$A,\ \ B,\ \  (A \eif (Q \eand R)),\ \  \enot\enot(B_3 \eif Z),\ \ldots$$
+Nesta cláusula, `$\meta{A}$' se refere de modo genérico a uma expressão qualquer da LP.
+Ela não é uma expressão específica da LP, como `$A$', mas uma váriável da metalinguagem (metavariável) que se refere genericamente a qualquer expressão da LP, tal como $$A,\ \ B,\ \  (A \eif (Q \eand R)),\ \  \enot\enot(B_3 \eif Z),\ \ldots$$
 Se, no lugar da cláusula 2, tivéssemos usado a seguinte formulação:
 	\begin{ebullet}
 		\item Se `$A$' é uma sentença, então `$\enot A$' é uma sentença.
@@ -1232,10 +1153,10 @@ nós não poderíamos, com esta formulação, determinar se `$\enot B$' ou `$\en
 Fazendo uma analogia com a matemática, é como se as letras sentencias tais como `$A$', `$D_3$',\ldots\ fossem os números, tais como $2$, $17$, \ldots\ e as metavariáveis tais como \meta{A}, \meta{B}, \ldots\ fossem as variáveis, tais como $n$, $x$, \ldots\ que podem assumir quaisquer valores entre os números.
 Para enfatizar:
 	\factoidbox{
-`$\meta{A}$' é um símbolo, que chamamos de \define{metavariavel} e que usamos para falar sobre qualquer expressão da LVF.
+`$\meta{A}$' é um símbolo, que chamamos de \define{metavariavel} e que usamos para falar sobre qualquer expressão da LP.
 
-`$A$' é apenas uma letra sentencial específica da LVF.
-Nós incluímos as metavariáveis `$\meta{A}$', `$\meta{B}$', `$\meta{C}$',\ldots\ ao português, para construir nossa metalinguagem, o \emph{português aumentado}, que usamos para falar da LVF.}
+`$A$' é apenas uma letra sentencial específica da LP.
+Nós incluímos as metavariáveis `$\meta{A}$', `$\meta{B}$', `$\meta{C}$',\ldots\ ao português, para construir nossa metalinguagem, o \emph{português aumentado}, que usamos para falar da LP.}
 
         \newglossaryentry{metavariables}
 {
@@ -1252,7 +1173,7 @@ Poderíamos, então, tentar reformular a cláusula como:
 		\item[2$'$.] Se \meta{A} é uma sentença, então `$\enot \meta{A}$' é uma sentença.
 	\end{enumerate}
 Mas esta reformulação também não é boa:
-`$\enot\meta{A}$' não é uma sentença da LVF, pois `$\meta{A}$' é um símbolo da metalinguagem, do português aumentado, e não um símbolo da LVF.
+`$\enot\meta{A}$' não é uma sentença da LP, pois `$\meta{A}$' é um símbolo da metalinguagem, do português aumentado, e não um símbolo da LP.
 
 O que realmente queremos dizer ali é algo como:
 	\begin{enumerate}
@@ -1268,10 +1189,10 @@ e, da mesma forma, expressões como `$(\meta{A} \eand \meta{B})$' e `$(\meta{A} 
 
 
 \section{Convenções para representação de argumentos}
-Um dos nossos principais objetivos para o uso da LVF é estudar argumentos. Este será o foco das Partes \ref{ch.TruthTables} e \ref{ch.NDTFL} do livro.
+Um dos nossos principais objetivos para o uso da LP é estudar argumentos. Este será o foco das Partes \ref{ch.TruthTables} e \ref{ch.NDTFL} do livro.
 Em português, cada premissa de um argumento é geralmente expressa por uma sentença individual e a conclusão por outra sentença.
-Da mesma forma que podemos simbolizar sentenças do português na LVF, podemos também simbolizar argumentos em português usando a LVF.
-Assim, poderíamos, por exemplo, perguntar se o argumento cujas premissas são as sentenças da LVF `$A$' e `$A \eif C$' e cuja conclusão é `$C$' é válido.
+Da mesma forma que podemos simbolizar sentenças do português na LP, podemos também simbolizar argumentos em português usando a LP.
+Assim, poderíamos, por exemplo, perguntar se o argumento cujas premissas são as sentenças da LP `$A$' e `$A \eif C$' e cuja conclusão é `$C$' é válido.
 No entanto, escrever tudo isso, sempre, é bem pouco econômico.
 Então, em vez disso, proporemos mais uma convenção para ampliar um pouco mais nossa metalinguagem:
 	$$\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n \therefore \meta{C}$$
@@ -1280,4 +1201,4 @@ será uma abreviação para:
 		o argumento com as premissas $\meta{A}_1, \meta{A}_2, \ldots, \meta{A}_n$ e a conclusão $\meta{C}$
 	\end{quote}
 Para manter o texto mais limpo e evitar confusões desnecessárias, não exigiremos aspas nesta representação de argumentos.
-(Note que `$\therefore$' é um símbolo de nossa \emph{metalinguagem}, o português aumentado, e não um novo símbolo de LVF.
+(Note que `$\therefore$' é um símbolo de nossa \emph{metalinguagem}, o português aumentado, e não um novo símbolo de LP.
