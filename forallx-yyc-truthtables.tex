@@ -7,13 +7,25 @@
 \chapter{Tabelas de verdade características}
 \label{s:CharacteristicTruthTables}
 
-Qualquer sentença da LVF é composta por letras sentenciais, possivelmente combinadas pelos conectivos sentenciais.
-O valor de verdade de uma sentença composta depende apenas do valor de verdade das letras sentenciais que a compõem.
+Nos capítulos anteriores, vimos o primeiro aspecto de um sistema lógico: a sua linguagem formal.
+O segundo aspecto é uma especificação do conceito de validez.
+Assim, um sistema lógico, ou simplesmente, uma \emph{lógica}, consiste em uma linguagem formal juntamente com uma especificação de validez para essa linguagem.
+Em seguida procedemos a desenvolver esse segundo aspecto.
+A lógica resultante será denominada \emph{lógica proposicional} ou também \emph{lógica verofuncional} (LFV).
+
+Dado um argumento formalizado na linguagem proposicional, para sabermos se ocorre que sempre que suas premissas são verdadeiras, a conclusão também é, devemos saber sob quais circunstâncias as premissas são verdadeiras.
+Para tanto, é necessário dar uma \emph{interpretação} para os operadores lógicos: no nosso caso, isso significará dizer em quais casos uma sentença contendo determinado operador como símbolo principal será verdadeira ou não.
+
+%Qualquer sentença da LVF é composta por letras sentenciais, possivelmente combinadas pelos conectivos sentenciais.
+Serão feitas as seguintes assunções nesta empreita:
+\begin{itemize}
+	\item Só existem dois valores de verdade: Verdadeiro e Falso.
+	\item O valor de verdade de uma sentença composta depende apenas do valor de verdade das sentenças que a constituem.
+\end{itemize}
 Para sabermos o valor de verdade de `$(D \eand E)$', por exemplo, basta sabermos o valor de verdade de `$D$' e `$E$'; exatamente do mesmo modo que saber o valor numérico de `$x+y$' depende apenas de saber os valores numéricos de `$x$' e `$y$'.
 
-No Capítulo \ref{s:TFLConnectives} nós apresentamos os cinco conectivos da LVF:
+Dadas essas assunções, abaixo são apresentadas interpretações  para os cinco conectivos da linguagem proposicional LP:
 `$\enot$', `$\eand$', `$\eor$', `$\eif$', `$\eiff$'.
-O que precisamos fazer agora é explicar qual é o tipo de operação que cada um deles faz com os valores de verdade.
 Por conveniência, abreviaremos `Verdadeiro' por `V' e `Falso' por `F'.
 Mas, que fique bem claro, os dois valores de verdade que nos interessam são o Verdadeiro (a verdade) e o Falso (a falsidade). Os valores de verdade não são \emph{letras}!
 
