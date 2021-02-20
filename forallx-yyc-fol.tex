@@ -13,13 +13,13 @@ Considere o seguinte argumento, que é obviamente válido:
 	\item[\therefore] Samir usa chapéus ridículos.
 \end{earg}
 Repare que todas as sentenças deste argumento são atômicas, ou seja, não são compostas por sentenças mais simples ligadas por conectivos verofuncionais.
-Por isso qualquer chave de simbolização para o argumento na LVF seria semelhante a esta:
+Por isso qualquer esquema de simbolização para o argumento na LVF seria semelhante a esta:
 \begin{ekey}
 \item[L] Samir é um lógico.
 \item[T] Todos os lógicos usam chapéus ridículos.
 \item[R] Samir usa chapéus ridículos.
 \end{ekey}
-Sob esta chave nosso argumento fica simplesmente:
+Sob este esquema nosso argumento fica simplesmente:
 $$L, T \therefore R$$
 %\begin{center}
 %	\item[] $L$
@@ -36,7 +36,7 @@ Isso demonstra que há uma assincronia (uma discrepância) entre as situações 
 
 Acontece que não cometemos nenhum erro de simbolização.
 Esta é a melhor simbolização na LVF que podemos oferecer a este argumento.
-Qualquer outra chave de simbolização aceitável na LVF diferiria desta apenas nas letras sentenciais utilizadas.
+Qualquer outro esquema de simbolização aceitável na LVF diferiria deste apenas nas letras sentenciais utilizadas.
 O argumento simbolizado continuaria inválido em qualquer uma delas.
 Este fato, conforme vimos na Seção \ref{s:ParadoxesOfMaterialConditional}, é um indício de que este argumento está além dos limites da LVF e vai requerer uma nova linguagem, com mais recursos, para que possa ser adequadamente simbolizado.
 
@@ -128,10 +128,10 @@ Um nome não pode se referir a mais de uma coisa, mas apenas a uma \emph{única}
   description = {A symbol of FOL used to pick out an object of the \gls{domain}}
   }
 
-Como na LVF, utilizaremos chaves de simbolização também na LPO.
-Um primeiro elemento, então, que nossas chaves de simbolização da LPO devem conter são os nomes.
+Como na LVF, utilizaremos esquemas de simbolização também na LPO.
+Um primeiro elemento, então, que nossos esquemas de simbolização da LPO devem conter são os nomes.
 Vamos utilizá-las para relacionar nomes da LPO com termos singulares (nomes próprios e descrições) do português.
-Uma chave de simbolização da LPO pode, por exemplo, apresentar a seguinte conexão entre nomes próprios do português e nomes da LPO:
+Um esquema de simbolização da LPO pode, por exemplo, apresentar a seguinte conexão entre nomes próprios do português e nomes da LPO:
 	\begin{ekey}
 		\item[e] Emília
 		\item[g] Glória
@@ -159,7 +159,7 @@ Ao remover um termo singular desta sentença, podemos obter qualquer um dos trê
 		Viviane pegou emprestado o carro da família de \blank
 	\end{quote}
 Os \define{predicados} na LPO são letras maiúsculas de $A$ a $Z$, com ou sem índices numéricos.
-Podemos apresentar uma chave de simbolização para predicados assim:
+Podemos apresentar um esquema de simbolização para predicados assim:
 	\begin{ekey}
 		\item[\atom{B}{x}] \gap{x} está bravo
 		\item[\atom{A}{x}] \gap{x} está alegre
@@ -175,7 +175,7 @@ Podemos apresentar uma chave de simbolização para predicados assim:
   description = {A symbol of FOL used to symbolize a property or relation}
 }
 
-Se combinarmos isso com a chave de simbolização para nomes que apresentamos na Seção anterior obtemos
+Se combinarmos isso com o esquema de simbolização para nomes que apresentamos na Seção anterior obtemos
 	\begin{ekey}
 		\item[\atom{B}{x}] \gap{x} está bravo
 		\item[\atom{A}{x}] \gap{x} está alegre
@@ -284,7 +284,7 @@ Ou seja, de modo coerente com o que mencionamos no parágrafo anterior, \ref{q.e
 
 
 \section{Domínios}
-Dada a chave de simbolização que estamos usando, `$\forall x\,\atom{A}{x}$' simboliza `Todos estão alegres'.
+Dado o esquema de simbolização que estamos usando, `$\forall x\,\atom{A}{x}$' simboliza `Todos estão alegres'.
 Mas quem está incluído neste \emph{todos}?
 Em português, quando usamos sentenças como esta, geralmente não queremos dizer com elas todos que estão atualmente vivos.
 Certamente também não queremos dizer todos que já estiveram vivos ou que um dia viverão.
@@ -294,7 +294,7 @@ todos nesta sala, ou todos que atualmente fazem o curso de dança contemporânea
 Para eliminar essa ambiguidade, precisaremos especificar um \define{dominio}.
 O domínio é a coleção das coisas sobre as quais estamos falando; e por isso é também chamado de \emph{domínio do discurso}.
 Assim, se quisermos falar sobre as pessoas em Caicó, definimos nosso domínio como as pessoas em Caicó.
-Anotamos o domínio no início da chave de simbolização, assim:
+Anotamos o domínio no início do esquema de simbolização, assim:
 \begin{center}
 	\begin{ekey}
 		\item[\text{domínio}] as pessoas em Caicó
@@ -302,7 +302,7 @@ Anotamos o domínio no início da chave de simbolização, assim:
 \end{center}
 O alcance dos quantificadores fica, então, limitado ao domínio estabelecido.
 Para expressar isso costuma-se dizer que os quantificadores \emph{variam sobre} o domínio.
-Dado, então, o domínio especificado na chave acima, `$\forall x$' deve ser lido, aproximadamente, como  `Toda pessoa em Caicó é tal que \ldots' e `$\exists x $' deve ser lido aproximadamente como `alguma pessoa em Caicó é tal que \ldots'. 
+Dado, então, o domínio especificado no esquema acima, `$\forall x$' deve ser lido, aproximadamente, como  `Toda pessoa em Caicó é tal que \ldots' e `$\exists x $' deve ser lido aproximadamente como `alguma pessoa em Caicó é tal que \ldots'. 
 
 \newglossaryentry{domain}{
   name = domain,
@@ -319,18 +319,18 @@ Se, por exemplo, quisermos nomear pessoas em outros lugares além de Caicó, pre
 	}
 
 Domínios com apenas um membro podem produzir alguns resultados estranhos.
-Considere a seguinte chave de simbolização:
+Considere o seguinte esquema de simbolização:
 \begin{center}
 \begin{ekey}
 \item[\text{domínio}] a Torre Eiffel
 \item[\atom{P}{x}] \gap{x} está em Paris.
 \end{ekey}
 \end{center}
-Dada esta chave, a maneira mais natural de parafrasear a sentença `$\forall x\,\atom{P}{x}$' em português é como: `Tudo está em Paris'.
-No entanto, dada a peculiaridade do domínio de nossa chave de simbolização, isso seria enganoso.
+Dado este esquema, a maneira mais natural de parafrasear a sentença `$\forall x\,\atom{P}{x}$' em português é como: `Tudo está em Paris'.
+No entanto, dada a peculiaridade do domínio de nosso esquema de simbolização, isso seria enganoso.
 Porque o que queremos dizer é que tudo \emph{no domínio} está em Paris.
 Mas nosso domínio contém apenas a Torre Eiffel.
-Portanto, com essa chave de simbolização, $\forall x\,\atom{P}{x}$ significa o mesmo que a sentença `a Torre Eiffel está em Paris' e por isso deveria ser dessa forma parafraseada em português.
+Portanto, com esse esquema de simbolização, $\forall x\,\atom{P}{x}$ significa o mesmo que a sentença `a Torre Eiffel está em Paris' e por isso deveria ser dessa forma parafraseada em português.
 
 
 \subsection{Termos sem referência}
@@ -350,7 +350,7 @@ Considere, então, estas duas sentenças:
 \item[\ex{chimera2}] A Quimera não está brava.
 \end{earg}
 É tentador simplesmente definir um nome da LPO para significar `Quimera'.
-Poderíamos obter assim a seguinte chave de simbolização:
+Poderíamos obter assim o seguinte esquema de simbolização:
 \begin{center}
 \begin{ekey}
 \item[\text{domínio}] seres na terra
@@ -358,7 +358,7 @@ Poderíamos obter assim a seguinte chave de simbolização:
 \item[\atom{B}{x}] \gap{x} está brava
 \end{ekey}
 \end{center}
-Com esta chave, poderíamos, então, simbolizar a sentença \ref{chimera1} como:
+Com este esquema, poderíamos, então, simbolizar a sentença \ref{chimera1} como:
 $$\atom{B}{q}$$
 e a sentença \ref{chimera2} como:
 $$\enot\atom{B}{q}$$
@@ -376,8 +376,8 @@ Mas o sentido de uma expressão não deveria depender da existência das coisas 
 Por exemplo, quando um ateu e um crente discutem sobre a existência de deus, ambos entendem o sentido das afirmações sobre as características de deus (onipotência, onisciência,...) e é justamente porque entende o sentido das descrições sobre deus que o ateu afirma que ele não existe.
 Ele acha que não deve haver um ser com tais características.
  
-Além disso, se uma sentença só tem sentido quando seus termos têm referência, `$\atom{B}{q}$' seria uma expressão significativa na LPO em algumas interpretações (ou seja, com algumas chaves de interpretação), mas não seria significativa em outras.
-Isso, no entanto, tornaria nossa linguagem formal refém de interpretações (chaves de simbolização) particulares.
+Além disso, se uma sentença só tem sentido quando seus termos têm referência, `$\atom{B}{q}$' seria uma expressão significativa na LPO em algumas interpretações (ou seja, com algums esquemas de interpretação), mas não seria significativa em outras.
+Isso, no entanto, tornaria nossa linguagem formal refém de interpretações (esquemas de simbolização) particulares.
 Mas uma vez que nós estamos interessados na forma lógica, nós queremos considerar a força lógica de uma sentença como `$\atom{B}{q}$' de modo independente de qualquer interpretação específica.
 Se `$\atom{B}{q}$' às vezes fosse significativa e às vezes sem sentido, não poderíamos fazer isso.
 
@@ -404,11 +404,11 @@ Considere as seguintes sentenças:
 		\item[\ex{quan3}] Nem todas as moedas sobre a mesa são de 10 centavos.
 		\item[\ex{quan4}] Nenhuma moeda em meu bolso é de 10 centavos.
 	\end{earg}
-Para fornecer uma chave de simbolização, precisamos especificar um domínio.
+Para fornecer um esquema de simbolização, precisamos especificar um domínio.
 Como estamos falando de moedas no meu bolso e na mesa, o domínio deve conter pelo menos todas essas moedas.
 Como não estamos falando de nada além de moedas, façamos o domínio ser todas moedas.
 Como não estamos falando de moedas específicas, não precisamos de nomes.
-Então aqui está a nossa chave de simbolização:
+Então aqui está a nosso esquema de simbolização:
 	\begin{center}
 	\begin{ekey}
 		\item[\text{domínio}] todas as moedas
@@ -483,7 +483,7 @@ Suponha que estejamos interessados em  simbolizar as duas sentenças seguintes:
 		\item[\ex{monkey1}] Todo macaco conhece a linguagem de sinais.
 		\item[\ex{monkey2}] Algum macaco conhece a linguagem de sinais.
 	\end{earg}
-Podemos propor a seguinte a chave de simbolização para essas sentenças:
+Podemos propor o seguinte esquema de simbolização para essas sentenças:
 	\begin{center}
 	\begin{ekey}
 		\item[\text{domínio}] os animais
@@ -509,7 +509,7 @@ Por outro lado, sob esta mesma hipótese de não haver macacos (no domínio), a 
 Então `$\forall x(\atom{M}{x} \eif \atom{L}{x})$' não sustenta `$\exists x(\atom{M}{x} \eand \atom{L}{x})$' e usamos este mesmo raciocínio para concluir que a sentença \ref{monkey1} não sustenta a sentença \ref{monkey2}.
 
 Mais um exemplo nos ajudará aqui.
-Considere a seguinte extensão para a chave de simbolização acima:
+Considere a seguinte extensão para o esquema de simbolização acima:
 		\begin{center}
 		\begin{ekey}
 			\item[\text{domínio}] os animais
@@ -519,7 +519,7 @@ Considere a seguinte extensão para a chave de simbolização acima:
 		\end{ekey}
 		\end{center}
 Agora considere a sentença `$\forall x(\atom{G}{x} \eif \atom{M}{x})$', que é uma simbolização de `toda geladeira é um macaco'.
-Dada nossa chave de simbolização, essa sentença é verdadeira; o que é um tanto contraintuitivo, já que nós (presumivelmente) não queremos dizer que há um monte de geladeiras macacos.
+Dada nosso esquema de simbolização, essa sentença é verdadeira; o que é um tanto contraintuitivo, já que nós (presumivelmente) não queremos dizer que há um monte de geladeiras macacos.
 É importante lembrar, porém, que `$\forall x(\atom{G}{x} \eif \atom{M}{x})$' é verdadeira se e somente se qualquer membro do domínio que é uma geladeira for também um macaco.
 Como o domínio é de \emph{animais} apenas, não há geladeiras no domínio. Novamente, então, a sentença é \emph{vacuamente} verdadeira:
 não conseguimos encontrar nenhum elemento do domínio que é uma geladeira, mas não é um macaco. 
@@ -538,13 +538,13 @@ Assim, o predicado `$G$' não seria vazio e a sentença `$\forall x(\atom{G}{x} 
 
 
 \section{Escolhendo um domínio}
-A simbolização apropriada na LPO de uma sentença originalmente em português dependerá da chave de simbolização.
-Escolher uma chave não é uma tarefa trivial.
+A simbolização apropriada na LPO de uma sentença originalmente em português dependerá do esquema de simbolização.
+Escolher um esquema não é uma tarefa trivial.
 Suponha que queiramos simbolizar a seguinte sentença:
 	\begin{earg}
 		\item[\ex{pickdomainrose}] Toda rosa tem um espinho.
 	\end{earg}
-Podemos começar nossa chave de simbolização propondo que:
+Podemos começar nosso esquema de simbolização propondo que:
 	\begin{ekey}
 		\item[\atom{R}{x}] \gap{x} é uma rosa
 		\item[\atom{E}{x}] \gap{x} tem um espinho
@@ -567,7 +567,7 @@ Nós certamente precisaremos de um domínio mais abrangente se, além de \ref{pi
 	\begin{earg}
 		\item[\ex{pickdomaincowboy}] Todo boia-fria trabalha cantando músicas tristes.
 	\end{earg}
-Nosso domínio agora precisa incluir todas as rosas (para conseguirmos simbolizar adequadamente a sentença \ref{pickdomainrose}) e todos os boias-frias (para conseguirmos simbolizar adequadamente a sentença \ref{pickdomaincowboy}). Deste modo, podemos oferecer a seguinte chave de simbolização:
+Nosso domínio agora precisa incluir todas as rosas (para conseguirmos simbolizar adequadamente a sentença \ref{pickdomainrose}) e todos os boias-frias (para conseguirmos simbolizar adequadamente a sentença \ref{pickdomaincowboy}). Deste modo, podemos oferecer o seguinte esquema de simbolização:
 	\begin{center}
 	\begin{ekey}
 		\item[\text{domínio}] pessoas e plantas
@@ -593,7 +593,7 @@ O que importa é a simbolização final na LPO.
 Outras vezes, no entanto, você precisará fazer uma ou mais paráfrases intermediárias da sentença original, até conseguir descobrir qual sua melhor simbolização na LPO.
 Cada paráfrase sucessiva é um passo que aproxima a sentença original de algo que você consiga simbolizar na LPO de modo fácil e direto.
 
-Para os exemplos a seguir, usaremos esta chave de simbolização:
+Para os exemplos a seguir, usaremos este esquema de simbolização:
 	\begin{center}
 	\begin{ekey}
 		\item[\text{domínio}] pessoas
@@ -656,7 +656,7 @@ Continuando com nosso exemplo, suponha que queremos simbolizar estas duas frases
 		\item[\ex{qscope2}] Qualquer pessoa é de tal modo que, se for sanfoneira, então Larissa é  sanfoneira.
 	\end{earg}
 Para simbolizar essas sentenças, temos que adicionar um nome na LPO para Larissa.
-Nossa chave fica então:
+Nosso esquema fica então:
 	\begin{center}
 	\begin{ekey}
 		\item[\text{domínio}] pessoas
@@ -728,7 +728,7 @@ Bruno é cirurgião, mas não é habilidoso.
 Portanto, Bruno é ganancioso, mas o hospital não o contratará.
 \end{quote}
 Precisamos distinguir ser um \emph{cirurgião habilidoso} de ser meramente um \emph{cirurgião}.
-Podemos, então, definir a seguinte chave de simbolização:
+Podemos, então, definir o seguinte esquema de simbolização:
 \begin{center}
 \begin{ekey}
 \item[\text{domínio}] pessoas
@@ -748,14 +748,14 @@ Nosso argumento pode agora ser assim simbolizado:
 \item[] $\atom{C}{b} \eand \enot \atom{H}{b}$
 \item[\therefore] $\atom{G}{b} \eand \enot \atom{T}{b}$
 \end{earg}
-Reflita com calma nesta simbolização e veja como ela formaliza adequadamente o argumento, de acordo com a chave de simbolização proposta.
+Reflita com calma nesta simbolização e veja como ela formaliza adequadamente o argumento, de acordo com o esquema de simbolização proposta.
 
 Suponha, em seguida, que queiramos simbolizar o argumento abaixo:
 \begin{quote}
 \label{surgeon3}
 Carol é uma cirurgiã habilidosa e é uma tenista. Portanto, Carol é uma tenista habilidosa.
 \end{quote}
-Assumindo a chave de simbolização do argumento anterior, podemos adicionar um predicado (faça `$\atom{J}{x}$' significar `$x$ é uma tenista') e um nome (seja `$c$' o nome de Carol na LPO).
+Assumindo o esquema de simbolização do argumento anterior, podemos adicionar um predicado (faça `$\atom{J}{x}$' significar `$x$ é uma tenista') e um nome (seja `$c$' o nome de Carol na LPO).
 Este argumento pode, então, ser simbolizado por:
 \begin{earg}
 \item[] $(\atom{C}{c} \eand \atom{H}{c}) \eand \atom{J}{c}$
@@ -825,7 +825,7 @@ Simbolize cada um destes quinze argumentos na LPO.
 
 \problempart
 \label{pr.FOLvegetarians}
-Com a chave de simbolização abaixo, simbolize na LPO cada uma das quatro sentenças seguintes:
+Com o esquema de simbolização abaixo, simbolize na LPO cada uma das quatro sentenças seguintes:
 \begin{center}
 \begin{ekey}
 \item[\text{domínio}] pessoas
@@ -846,7 +846,7 @@ Com a chave de simbolização abaixo, simbolize na LPO cada uma das quatro sente
 \solutions
 
 \problempart\label{pr.FOLalligators}
-Com a chave de simbolização abaixo, simbolize na LPO cada uma das oito sentenças seguintes:
+Com o esquema de simbolização abaixo, simbolize na LPO cada uma das oito sentenças seguintes:
 \begin{center}
 \begin{ekey}
 \item[\text{domínio}] os animais
@@ -871,7 +871,7 @@ Com a chave de simbolização abaixo, simbolize na LPO cada uma das oito senten�
 
 \problempart
 \label{pr.FOLarguments}
-Para cada um dos seis argumentos abaixo, proponha uma chave de simbolização e simbolize-o na LPO.
+Para cada um dos seis argumentos abaixo, proponha um esquema de simbolização e simbolize-o na LPO.
 \begin{earg}
 \item Samir é um lógico. Todos os lógicos usam chapéus ridículos. Logo Samir usa chapéus ridículos.
 
@@ -967,7 +967,7 @@ Suponha que queiramos simbolizar as seguintes sentenças:
 		\item[\ex{terms5}] Guto ama Nico, mas não o contrário.
 		\item[\ex{terms6}] Guto é amado por Nico.
 	\end{earg}
-Vamos começar propondo a seguinte chave de simbolização:
+Vamos começar propondo o seguinte esquema de simbolização:
 \begin{center}
 	\begin{ekey}
 		\item[\text{domínio}] pessoas
@@ -990,13 +990,13 @@ $$\atom{A}{n,g}$$
 O tom em que uma sentença é proferida, em geral, não costuma interferir em sua verdade ou falsidade, nem tampouco na validade ou invalidade dos argumentos que envolvem tal sentença. 
 
 Este último exemplo, no entanto, destaca algo importante.
-Suponha que adicionemos à nossa chave de simbolização a seguinte relação:
+Suponha que adicionemos ao nosso esquema de simbolização a seguinte relação:
 \begin{center}
 	\begin{ekey}
 		\item[\atom{C}{x,y}] \gap{y} ama \gap{x}
 	\end{ekey}
 \end{center}
-Estamos usando aqui a mesma palavra em português (`ama') que usamos em nossa chave de simbolização para `$\atom{A}{x,y}$'.
+Estamos usando aqui a mesma palavra em português (`ama') que usamos em nosso esquema de simbolização para `$\atom{A}{x,y}$'.
 No entanto, repare que trocamos a ordem das \emph{lacunas}.
 Olhe atentamente para os índices dos traços que indicam as lacunas dos dois casos abaixo:
 
@@ -1066,7 +1066,7 @@ tome muito cuidado com a ordem dos quantificadores.
 Uma vez que temos a possibilidade de múltiplos quantificadores e predicados de muitos lugares, a simbolização na LPO pode rapidamente se tornar um pouco complicada.
 Ao tentar simbolizar uma sentença complexa, recomendamos que você utilize alguns atalhos.
 Como sempre, essa ideia é melhor ilustrada através de exemplos.
-Considere a seguinte chave de simbolização:
+Considere o seguinte esquema de simbolização:
 \begin{center}
 \begin{ekey}
 \item[\text{domínio}] pessoas e cachorros
@@ -1227,7 +1227,7 @@ Portanto, o que Nicholls afirma equivale a uma traição contra a rainha!
 \practiceproblems
 \solutions
 \problempart
-Utilize a seguinte chave de simbolização para simbolizar na LPO cada uma das quinze sentenças abaixo.
+Utilize o seguinte esquema de simbolização para simbolizar na LPO cada uma das quinze sentenças abaixo.
 \begin{center}
 \begin{ekey}
 \item[\text{domínio}] todos os animais
@@ -1260,7 +1260,7 @@ Utilize a seguinte chave de simbolização para simbolizar na LPO cada uma das q
 \end{earg}
 
 \problempart 
-Utilize a seguinte chave de simbolização para simbolizar na LPO cada uma das dezesseis sentenças abaixo.
+Utilize o seguinte esquema de simbolização para simbolizar na LPO cada uma das dezesseis sentenças abaixo.
 \begin{center}
 \begin{ekey}
 \item[\text{domínio}] all animals
@@ -1292,7 +1292,7 @@ Utilize a seguinte chave de simbolização para simbolizar na LPO cada uma das d
 
 \problempart
 \label{pr.QLcandies}
-Utilize a seguinte chave de simbolização para simbolizar na LPO cada uma das dez sentenças abaixo.
+Utilize o seguinte esquema de simbolização para simbolizar na LPO cada uma das dez sentenças abaixo.
 \begin{center}
 \begin{ekey}
 \item[\text{domínio}] doces
@@ -1317,7 +1317,7 @@ Utilize a seguinte chave de simbolização para simbolizar na LPO cada uma das d
 \end{earg}
 
 \problempart
-Utilize a seguinte chave de simbolização para simbolizar na LPO cada uma das nove sentenças abaixo.
+Utilize o seguinte esquema de simbolização para simbolizar na LPO cada uma das nove sentenças abaixo.
 \begin{center}
 \begin{ekey}
 \item[\text{domínio}] pessoas e comidas em uma festa
@@ -1347,7 +1347,7 @@ Utilize a seguinte chave de simbolização para simbolizar na LPO cada uma das n
 \solutions
 \problempart
 \label{pr.FOLballet}
-Utilize a seguinte chave de simbolização para simbolizar na LPO cada uma das doze sentenças abaixo.
+Utilize o seguinte esquema de simbolização para simbolizar na LPO cada uma das doze sentenças abaixo.
 \begin{center}
 \begin{ekey}
 \item[\text{domínio}] pessoas
@@ -1380,7 +1380,7 @@ Utilize a seguinte chave de simbolização para simbolizar na LPO cada uma das d
 \chapter{Identidade}
 \label{sec.identity}
 
-Considere a sentença e chave de simbolização seguintes: 
+Considere a sentença e o esquema de simbolização seguintes: 
 
 \begin{earg}
 \item[\ex{else1}] Paulo deve dinheiro a todos.
@@ -1410,10 +1410,10 @@ Podemos adicionar um novo símbolo à LPO, de modo a dotá-la de uma abordagem s
 
 \section{Adicionando a identidade}
 O símbolo `$=$' é um predicado de dois lugares, ou seja, uma relação binária.
-Ele será incluído na LPO e terá uma interpretação única, inalterável por qualquer chave de simbolização.
+Ele será incluído na LPO e terá uma interpretação única, inalterável por qualquer esquema de simbolização.
 Como já estamos acostumados com este símbolo na matemática, sua notação seguirá o padrão da matemática:
 colocaremos o predicado de identidade entre os dois termos que ele relaciona, e não à esquerda, como fazemos com os demais predicados e relações.
-A seguinte chave de simbolização explicita tanto a notação especial, como o significado único da identidade na LPO:
+O seguinte esquema de simbolização explicita tanto a notação especial, como o significado único da identidade na LPO:
 	\begin{ekey}
 		\item[x=y] \gap{x} e \gap{y}\ são o mesmo objeto. 
 	\end{ekey}
@@ -1425,7 +1425,7 @@ Suponha, agora, que queremos simbolizar a seguinte sentença:
 \begin{earg}
 \item[\ex{else2}] Paulo é o Dr. Ferreira.
 \end{earg}
-Vamos adicionar mais um nome à nossa chave de simbolização:
+Vamos adicionar mais um nome ao nosso esquema de simbolização:
 	\begin{ekey}
 		\item[f] Dr. Ferreira
 	\end{ekey}
@@ -1488,7 +1488,7 @@ $$\exists y \atom{D}{y,h}\eand \enot\exists x(\enot x = p \eand \atom{D}{x,h})$$
 $$\exists y \atom{D}{y,h}\eand \forall x (\atom{D}{x,h} \eif x = p)$$
 Incluir a identidade na LPO significa tratá-la como um conceito lógico, tanto quanto o são a negação, o condicional, os quantificadores e demais conectivos.
 Ao pertencer à LPO, sua interpretação fica fixada e não pode variar.
-Ou seja, a linha da chave de simbolização especificada anteriormente e o significado que definimos para a identidade ficam implícitos e fixos em toda chave de simbolização, seja ela qual for.
+Ou seja, a linha do esquema de simbolização especificada anteriormente e o significado que definimos para a identidade ficam implícitos e fixos em todo esquema de simbolização, seja ela qual for.
 Não incluir a identidade na LPO, por sua vez, não nos retira a possibilidade de simbolizar adequadamente as sentenças acima.
 Poderíamos propor um predicado para a identidade e simbolizar essas sentenças.
 A diferença é que não seríamos obrigados a adotar o significado único da identidade, definido na LPO.
@@ -1505,7 +1505,7 @@ Também podemos usar a identidade para dizer quantas coisas de um tipo específi
 \item[\ex{atleast2}] Há pelo menos dois cajus.
 \item[\ex{atleast3}] Existem pelo menos três cajus.
 \end{earg}
-Usaremos a seguinte chave de simbolização
+Usaremos o seguinte esquema de simbolização
 	\begin{center}
 	\begin{ekey}
 		\item[\text{domínio}] coisas em minha geladeira
@@ -1601,7 +1601,7 @@ Considere, por fim, as seguintes sentenças:
 \item[\ex{exactly2things}] Há exatamente duas coisas.
 \item[\ex{exactly2objects}] Existem exatamente dois objetos.
 \end{earg}
-Poderíamos ficar tentados a adicionar um predicado à nossa chave para simbolizar a o predicado do português `\blank\ é uma coisa' ou `\blank\ é um objeto'.
+Poderíamos ficar tentados a adicionar um predicado ao nosso esquema para simbolizar a o predicado do português `\blank\ é uma coisa' ou `\blank\ é um objeto'.
 Mas isso é desnecessário.
 A não ser que estejamos fazendo sofisticadas distinções metafísicas, palavras 
 como `coisa', `objeto' ou `entidade' não separam o joio do trigo:
@@ -1655,7 +1655,7 @@ A questão que nos interessa aqui é: como simbolizar descrições definidas na 
 
 \section[Descrições definidas como termos]{Tratando descrições definidas como termos}
 Uma opção seria simbolizar descrições definidas através de nomes novos. Esta, provavelmente, não seria uma boa ideia.
-Considere, por exemplo, a seguinte chave de simbolização:
+Considere, por exemplo, o seguinte esquema de simbolização:
 \begin{center}
 	\begin{ekey}
 		\item[\text{domínio}] pessoas
@@ -1666,12 +1666,12 @@ Considere, por exemplo, a seguinte chave de simbolização:
 Poderíamos, com ela, simbolizar a sentença \ref{traitor2} acima como:
 $$\atom{U}{t}$$
 Mas esta simbolização diz apenas que a pessoa (indivíduo do domínio) com o nome `$t$' estudou na UFRN.
-A propriedade que `$t$' tem, de ser `um traidor', que até está indicada na chave, perde-se nesta simbolização.
+A propriedade que `$t$' tem, de ser `um traidor', que até está indicada no esquema, perde-se nesta simbolização.
 Na LPO os nomes apenas apontam para indivíduos do domínio, não lhes atribuem qualquer propriedade.
 Para fazer isso precisamos de um predicado.
 
 Uma opção melhor, então, seria acrescentar um novo símbolo (`$\maththe$' por exemplo) à LPO e utilizá-lo junto com um predicado  para simbolizar uma descrição definida.
-Vamos então reformular nossa chave de simbolização para visualizar esta alternativa:
+Vamos então reformular nosso esquema de simbolização para visualizar esta alternativa:
 \begin{center}
 	\begin{ekey}
 		\item[\text{domínio}] pessoas
@@ -1681,7 +1681,7 @@ Vamos então reformular nossa chave de simbolização para visualizar esta alter
 		\item[n] Nivaldo
 	\end{ekey}
 \end{center}
-Com nosso novo símbolo e esta nova chave, a descrição definida `o traidor' seria simbolizada por:
+Com nosso novo símbolo e este novo esquema, a descrição definida `o traidor' seria simbolizada por:
 $$\maththe x\, \atom{T}{x}$$
 que lemos como:
 \begin{center}
@@ -1695,7 +1695,7 @@ Por exemplo, `$\forall x\, \atom{T}{x}$' é verdadeira se todos os indivíduos d
 Entretanto, não cabe perguntarmos se  `$\maththe x\, \atom{T}{x}$' é verdadeira ou falsa.
 `$\maththe x\, \atom{T}{x}$' é uma expressão que se comporta como os nomes.
 Sua função é designar (apontar) um indivíduo específico do domíno, o único indivíduo que é um traidor.
-Assim, dada nossa chave, simbolizaríamos a sentença \ref{traitor1} acima, `Nivaldo é o traidor', como:
+Assim, dado nosso esquema, simbolizaríamos a sentença \ref{traitor1} acima, `Nivaldo é o traidor', como:
 $$n = \maththe x\, \atom{T}{x}$$
 Já a sentença \ref{traitor2}, `O traidor estudou na UFRN', seria simbolizada por:
 $$\atom{U}{\maththe x\,\atom{T}{x}}$$
@@ -1784,7 +1784,7 @@ Qual seria o fundamento para sua verdade?
 
 A análise de Russell resolve de um modo bastante elegante esse problema.
 De acordo com ela, uma paráfrase aceitável para a sentença \ref{kingbald} é: `há um e apenas um $x$ que é o atual rei da França e $x$ é careca'.
-Considere, agora a seguinte chave de simbolização:
+Considere, agora o seguinte esquema de simbolização:
 	\begin{center}
 	\begin{ekey}
 		\item[\text{domínio}] pessoas
@@ -1792,7 +1792,7 @@ Considere, agora a seguinte chave de simbolização:
 		\item[\atom{C}{x}] \gap{x} é careca.
 	\end{ekey}
 	\end{center}
-Com esta chave e a paráfrase fornecida pela análise de Russel, a sentença \ref{kingbald} pode então ser simbolizada como:
+Com este esquema e a paráfrase fornecida pela análise de Russel, a sentença \ref{kingbald} pode então ser simbolizada como:
 %$$\exists x \bigl[\forall y(\atom{R}{y} \eiff x = y) \eand \atom{C}{x}\bigr]$$
 $$\exists x \bigl[(\atom{R}{x} \eand \forall y (\atom{R}{y} \eif x = y)) \eand \atom{C}{x}\bigr]$$
 Esta sentença, conforme veremos mais detalhadamente na próxima Parte do livro, é uma sentença falsa, uma vez que seu primeiro conjunto, `$\atom{R}{x}$', é falso para qualquer elemento do domínio (ninguém é o atual rei da França).
@@ -1808,7 +1808,7 @@ Por outro lado, uma sentença que nega toda a sentença \ref{kingbald} e que dev
 	\begin{earg}
 		\item[\ex{notkingbald}] Não é o caso que o atual rei da França é careca
 	\end{earg}
-sua simbolização de acordo com nossa chave seria:
+sua simbolização de acordo com nosso esquema seria:
 $$\enot\exists x \bigl[(\atom{R}{x} \eand \forall y (\atom{R}{y} \eif x = y)) \eand \atom{C}{x}\bigr]$$
 Então é a sentença \ref{notkingbald} e não a \ref{kingnotbald}, que corresponde à negação da sentença \ref{kingbald}.
 Para distingui-la da negação interna, nos contextos em que esta diferenciação é relevante, convencionou-se chamar esta negação de \emph{negação externa}.
@@ -1882,7 +1882,7 @@ Ela certamente é uma análise defensável, além de ser o melhor que podemos of
 \practiceproblems
 
 \problempart
-Utilize a seguinte chave de simbolização para simbolizar na LPO cada uma das sete sentenças abaixo.
+Utilize o seguinte esquema de simbolização para simbolizar na LPO cada uma das sete sentenças abaixo.
 \begin{center}
 \begin{ekey}
 \item[\text{domínio}] pessoas
@@ -1908,7 +1908,7 @@ Utilize a seguinte chave de simbolização para simbolizar na LPO cada uma das s
 \solutions
 \problempart
 \label{pr.FOLcards}
-Utilize a seguinte chave de simbolização para simbolizar na LPO cada uma das doze sentenças abaixo.
+Utilize o seguinte esquema de simbolização para simbolizar na LPO cada uma das doze sentenças abaixo.
 \begin{center}
 \begin{ekey}
 \item[\text{domínio}] cartas de um baralho típico
@@ -1942,7 +1942,7 @@ Utilize a seguinte chave de simbolização para simbolizar na LPO cada uma das d
 \end{earg}
 
 
-\problempart Utilize a seguinte chave de simbolização para simbolizar na LPO cada uma das oito sentenças abaixo.
+\problempart Utilize o seguinte esquema de simbolização para simbolizar na LPO cada uma das oito sentenças abaixo.
 \begin{center}
 \begin{ekey}
 \item[\text{domínio}] animais no mundo
@@ -2108,7 +2108,7 @@ Abaixo uma ilustração gráfica do escopo dos quantifidadores da última fórmu
 E os argumentos são compostos por sentenças declarativas:
 sentenças que podem ser verdadeiras ou falsas (asserções).
 Entretanto, muitas fórmulas não são asserções.
-Considere a seguinte chave de simbolização:
+Considere o seguinte esquema de simbolização:
 \begin{center}
 	\begin{ekey}
 		\item[\text{domínio}] pessoas

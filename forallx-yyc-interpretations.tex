@@ -16,11 +16,11 @@ Ela toma dois valores de verdade como argumentos, o `V' (de $A$) e o `F' (de $B$
 Assim, tudo que conseguimos fazer com a lógica verofuncional (LVF) é mapear sentenças em valores de verdade específicos.
 %São operações que levam valores de verdade em valores de verdade, de acordo com as estipulações descritas nas tabelas de verdade características (Capítulo \ref{s:CharacteristicTruthTables}, p.\,\pageref{s:CharacteristicTruthTables}).
 Nós podemos fazer isso \emph{diretamente}, quando, por exemplo, estipulamos que a sentença `$P$' é verdadeira.
-Mas nós também podemos (e é isso o que em geral fazemos) mapear sentenças a valores de verdade de modo \emph{indireto}, através de chaves de simbolização, tais como:
+Mas nós também podemos (e é isso o que em geral fazemos) mapear sentenças a valores de verdade de modo \emph{indireto}, através de esquemas de simbolização, tais como:
 	\begin{ekey}
 		\item[P] O Forte dos Reis Magos situa-se em Natal.
 	\end{ekey}
-Conforme vimos no capítulo \ref{s:TruthFunctionality}, uma chave de simbolização como esta deve ser entendida como nos dizendo que:
+Conforme vimos no capítulo \ref{s:TruthFunctionality}, um esquema de simbolização como este deve ser entendido como nos dizendo que:
 	\begin{ebullet}
 		\item A sentença `$P$' da LVF deve assumir o mesmo valor de verdade que a sentença em português `O Forte dos Reis Magos situa-se em Natal', qualquer que seja esse valor de verdade.
 	\end{ebullet}
@@ -33,7 +33,7 @@ A LPO também tem algumas limitações semelhantes.
 E isso nos permite considerar o que é \emph{verdadeiro} sobre um objeto em particular, ou sobre alguns objetos, ou sobre todos os objetos.
 Mas não conseguimos fazer nada a mais do que isso.
 
-Quando fornecemos uma chave de simbolização para alguns predicados da LPO, tais como:
+Quando fornecemos um esquema de simbolização para alguns predicados da LPO, tais como:
 	\begin{ekey}
 		\item[\atom{L}{x}] \gap{x} é um professor de lógica que torce para o Alecrim.
 	\end{ekey} 
@@ -49,7 +49,7 @@ Assim, em particular:
 E isto é uma estipulação indireta da verdade de `$\atom{L}{x}$'.
 De modo alternativo, podemos também estipular diretamente de quais objetos um predicado deve ser verdadeiro.
 Por exemplo, podemos estipular que `$\atom{L}{x}$' seja verdadeiro para Daniel Durante e para mais ninguém.
-Por acaso, Daniel Durante é a única pessoa do universo que ensina lógica e torce para o Alecrim e, portanto, esta estipulação direta teria o mesmo efeito que a estipulação indireta dada pela chave de simbolização.
+Por acaso, Daniel Durante é a única pessoa do universo que ensina lógica e torce para o Alecrim e, portanto, esta estipulação direta teria o mesmo efeito que a estipulação indireta dado pelo esquema de simbolização.
 Observe, no entanto, que os predicados em português:
 \begin{earg}
 	\item[] `\blank\ é Daniel Durante'
@@ -59,13 +59,13 @@ têm significados muito diferentes!
 
 O ponto aqui é que a LPO não nos fornece nenhum recurso para lidar com nuances de significado.
 O único modo no qual dois predicados da LPO podem ser distintos um do outro é sendo verdadeiros de coisas diferentes.
-%Tudo o que conseguimos dizer na LPO através de predicados é de que coisas eles  são verdadeiros, seja estipulando diretamente (listando explicitamente as coisas), seja indiretamente, via chave de simbolização.
+%Tudo o que conseguimos dizer na LPO através de predicados é de que coisas eles  são verdadeiros, seja estipulando diretamente (listando explicitamente as coisas), seja indiretamente, via esquema de simbolização.
 As coisas das quais um predicado é verdadeiro são conhecidas como a \define{extensao} desse predicado.
 Nós dizemos que a LPO é uma \define{linguagem extensional} porque ela reduz os predicados a suas extensões.
 Ou seja, não conseguimos, com a LPO, exprimir as diferenças de significado entre predicados que tenham a mesma extensão.    
 
 Apenas para fixar este ponto importante, vejamos mais um exemplo.
-Considere a seguinte chave de simbolização:
+Considere o seguinte esquema de simbolização:
 \begin{center}
 	\begin{ekey}
 		\item[\text{domínio}] seres vivos
@@ -97,7 +97,7 @@ Por exemplo, poderíamos estipular que `$\atom{H}{x}$' deve ser verdadeiro para 
 Estes objetos listados não têm nada em comum.
 Mas isso não importa.
 A lógica não se importa com o que nos parece como ``natural'' ou ``semelhante''.
-Munidos com esta interpretação de `$\atom{H}{x}$', suponha que agora adicionamos os seguintes nomes à nossa chave de simbolização:
+Munidos com esta interpretação de `$\atom{H}{x}$', suponha que agora adicionamos os seguintes nomes ao nosso esquema de simbolização:
 	\begin{ekey}
 		\item[m] Zila Mamede
 		\item[d] Dilma Rousseff
@@ -108,13 +108,13 @@ Então, `$\atom{H}{m}$' e `$\atom{H}{p}$' serão ambas verdadeiras, nesta interp
 
 \section{Relações}
 A noção de extensão de predicados de um lugar não é muito difícil de entender, mas as coisas ficam um pouco mais confusas quando lidamos com predicados de muitos lugares, ou seja, com relações.
-Considere a seguinte chave de simbolização:
+Considere o seguinte esquema de simbolização:
 \begin{center}
 	\begin{ekey}
 		\item[\atom{A}{x,y}] \gap{x} ama \gap{y}
 	\end{ekey}
 \end{center}
-Dado o que dissemos anteriormente, essa chave de simbolização deve ser lida como dizendo:
+Dado o que dissemos anteriormente, esse esquema de simbolização deve ser lido como dizendo:
 	\begin{earg}
 		\item[\textbullet] `$\atom{A}{x,y}$'  \ e \ `\gap{x} ama \gap{y}' \ devem ser verdadeiras exatamente das mesmas coisas.
 	\end{earg}
@@ -178,7 +178,7 @@ Nós o escrevemos um pouco diferente das outras relações binárias:
 \begin{center}
 	`$x=y$' \ \ \ em vez de \ \ \ `$\atom{I}{x,y}$'
 \end{center}
-Mais importante que isso, porém, é que a interpretação semântica da identidade é fixa, não depende, como os outros predicados, de chaves de simbolização, nem de estipulações explícitas. 
+Mais importante que isso, porém, é que a interpretação semântica da identidade é fixa, não depende, como os outros predicados, de esquemas de simbolização, nem de estipulações explícitas. 
 
 Se dois nomes se referirem ao mesmo objeto, trocar um nome por outro não altera o valor de verdade de nenhuma sentença.
 Portanto, se, por exemplo, `$a$' e `$b$' nomearem o mesmo objeto, todas as sentenças abaixo serão verdadeiras:\label{model.nonidentity}
@@ -218,7 +218,7 @@ Afinal, parece plausível aceitar que aquilo que não se pode distinguir deva me
 O ponto da controvérsia é que a distinguibilidade dos objetos é algo que depende de \emph{nós}, da \emph{nossa linguagem}, de \emph{nossos conceitos}, ao passo que a identidade dos objetos não parece depender de nós, mas apenas dos próprios objetos.
 A ideia é que pode ocorrer de, por exemplo, não termos linguagem nem conceitos refinados o suficiente para conseguir distinguir certos objetos que nos aparecem indistinguíveis mas que são, na realidade, distintos.
 O seguinte exemplo é um tanto artificial, mas nos ajuda a entender como nossa linguagem pode ser inadequada para perceber certas distinções.
-Considere a seguinte interpretação (chave de simbolização):
+Considere a seguinte interpretação (esquema de simbolização):
 	\begin{center}
 	\begin{ebullet}
 		\item[\text{domínio}:] Bertrand Russell, Bruno Vaz
@@ -249,9 +249,9 @@ Na LPO, vamos definir uma \define{interpretacao} como consistindo dos seguintes 
 		\item para cada predicado de um lugar que considerarmos, uma especificação das coisas do domínio para as quais o predicado deve ser verdadeiro (sua extensão);
 		\item para cada predicado de $n$ lugares que considerarmos, uma especificação das sequências ordenadas de $n$ coisas do domínio \ntuple{$c_1,\ldots,c_n$} para as quais o predicado deve ser verdadeiro (sua extensão).
 	\end{ebullet}
-Dados estes elementos, as chaves de simbolização que consideramos na Parte~\ref{ch.FOL} nos proporcionam uma maneira muito conveniente de apresentar uma interpretação.
+Dados estes elementos, os esquemas de simbolização que consideramos na Parte~\ref{ch.FOL} nos proporcionam uma maneira muito conveniente de apresentar uma interpretação.
 E nós continuaremos a usá-las ao longo desta Parte.
-Sendo um pouco mais precisos aqui, podemos dizer que uma \emph{interpretação é exatamente uma chave de simbolização} que contempla todos estes elementos acima.\footnote{
+Sendo um pouco mais precisos aqui, podemos dizer que uma \emph{interpretação é exatamente um esquema de simbolização} que contempla todos estes elementos acima.\footnote{
 	Alguns destes elementos podem ficar de fora de algumas interpretações caso o contexto de sua utilização não os exija. Por exemplo, não há necessidade de uma interpretação ter letras sentenciais, se não simbolizarmos nenhuma sentença com letras sentenciais. Da mesma forma, se nenhum indivíduo do domínio do discurso tem nome, os nomes podem ficar de fora de uma interpretação; ou se não estamos interessados em relações, mas apenas em predicados de um lugar, então as relações também podem ficar de fora.}
 No entanto, às vezes também é conveniente apresentar uma interpretação \emph{diagramaticamente}.
 
@@ -316,23 +316,23 @@ E também não custa nada relembrar que um argumento é válido quando suas prem
 Então, antes de sermos capazes de avaliar argumentos na LPO, precisamos ser capazes de ligar as sentenças da LPO a situações em que poderemos avaliar se elas são verdadeiras ou falsas.
 
 %Na LVF, esta ponte entre as sentenças simbolizadas e as situações é feita pelas valorações.
-Na LVF, esta ponte que nos possibilita interpretar sentenças simbolizadas em situações nas quais elas serão verdadeiras ou falsas é dada pelas chaves de simbolização, juntamente com as valorações.
-%Através de uma chave de simbolização, situações distintas produzem valorações distintas nas quais as sentenças são verdadeiras ou falsas;
-Através de uma chave de simbolização, a verdade ou falsidade das sentenças em português nas diversas situações transforma-se na verdade ou falsidade das sentenças simbolizadas na LVF nas diversas valorações.
-Uma chave de simbolização liga situações distintas a valorações distintas que correspondem às diversas linhas das tabelas de verdade, nas quais as sentenças da LPO são verdadeiras ou falsas.
+Na LVF, esta ponte que nos possibilita interpretar sentenças simbolizadas em situações nas quais elas serão verdadeiras ou falsas é dada pelos esquemas de simbolização, juntamente com as valorações.
+%Através de um esquema de simbolização, situações distintas produzem valorações distintas nas quais as sentenças são verdadeiras ou falsas;
+Através de um esquema de simbolização, a verdade ou falsidade das sentenças em português nas diversas situações transforma-se na verdade ou falsidade das sentenças simbolizadas na LVF nas diversas valorações.
+Um esquema de simbolização liga situações distintas a valorações distintas que correspondem às diversas linhas das tabelas de verdade, nas quais as sentenças da LPO são verdadeiras ou falsas.
 E a consideração dos valores de verdade das sentenças em todas as valorações possíveis, feita nas tabelas de verdade, nos possibilita avaliar a validade dos argumentos.\footnote{
 	Se quiser relembrar os detalhes deste processo na LVF, releia a Seção~\ref{s:SustentValid}, p.\,\pageref{s:SustentValid}.}
 %e a consideração, através das tabelas de verdade, de todas as valorações possíveis, nos possibilita avaliar a validade dos argumentos.
 
 No caso da LPO, esta ponte entre as sentenças simbolizadas e as situações é feita pela noção de interpretação, introduzida na Seção \ref{s:Interpret}, p.\,\pageref{s:Interpret}.
-Vimos ali que uma interpretação é uma chave de simbolização composta por: 
+Vimos ali que uma interpretação é um esquema de simbolização composto por: 
 \begin{ebullet}
 	\item um domínio do discurso;
 	\item uma atribuição (direta ou indireta) de valores de verdade para cada letra sentencial;
 	\item a definição de uma referência, no domínio, para cada nome;
 	\item a definição (dierta ou indireta) de uma extensão para cada predicado e relação.
 \end{ebullet}
-Uma chave de simbolização com todos esses componentes constitui uma interpretação e nos fornece tudo o que precisamos para decidir se uma sentença qualquer da LPO é verdadeira ou falsa.
+Um esquema de simbolização com todos esses componentes constitui uma interpretação e nos fornece tudo o que precisamos para decidir se uma sentença qualquer da LPO é verdadeira ou falsa.
 Entender como utilizar interpretações para classificar as sentenças da LPO como verdadeiras ou falsas é o primeiro passo para conseguirmos avaliar argumentos na LPO, e será nossa tarefa neste capítulo.
 
 Sabemos, do Capítulo \ref{s:FOLSentences}, que existem três tipos de sentenças na LPO:
