@@ -111,14 +111,14 @@ Obtemos novas letras sentenciais adicionando subíndices às letras do alfabeto.
 Por exemplo, abaixo temos cinco letras sentenciais diferentes:
 	$$A, P, P_1, P_2, A_{234}$$
 Usaremos as letras sentenciais para representar ou \emph{simbolizar} certas sentenças em português.
-Para fazer isso, precisamos fornecer uma \define{chave de simbolizacao}, tal como a seguinte
+Para fazer isso, precisamos fornecer um \define{esquema de simbolizacao}, tal como o seguinte
 	\begin{ekey}
 		\item[A] Chove lá fora
 		\item[C] Sheila está melancólica
 	\end{ekey}
-Ao fazer isso, não estamos fixando essa chave simbolização \emph{para sempre}.
+Ao fazer isso, não estamos fixando esse esquema de simbolização \emph{para sempre}.
 Estamos apenas dizendo que, por enquanto, usaremos a letra sentencial `$A$'  da LVF para simbolizar a sentença em português `Chove lá fora', e a letra sentencial `$C$' para simbolizar a sentença `Sheila está melancólica'.
-Mais tarde, quando estivermos lidando com sentenças diferentes ou argumentos diferentes, poderemos fornecer uma nova chave de simbolização, tal como:
+Mais tarde, quando estivermos lidando com sentenças diferentes ou argumentos diferentes, poderemos fornecer um novo esquema de simbolização, tal como:
 	\begin{ekey}
 		\item[A] Márcia é uma sindicalista anarquista
 		\item[C] Sílvio é um ávido leitor de Tolstoy
@@ -190,7 +190,7 @@ Considere como nós poderíamos simbolizar estas sentenças:
 	\item[\ex{not3}] Maria não está em Mossoró.
 	\end{earg}
 Para simbolizar a sentença \ref{not1}, simplesmente adotamos uma letra sentencial.
-Podemos propor a seguinte chave de simbolização:
+Podemos propor o seguinte esquema de simbolização:
 	\begin{ekey}
 		\item[M] Maria está em Mossoró.
 	\end{ekey}
@@ -221,13 +221,13 @@ Uma sentença pode ser simbolizada como $\enot\meta{A}$ se puder ser parafrasead
 		\item[\ex{not5}] O dispositivo é insubstituível.
 		\item[\ex{not5b}] O dispositivo não é insubstituível.
 	\end{earg}
-Vamos usar a seguinte chave de substituição:
+Vamos usar o seguinte esquema de substituição:
 	\begin{ekey}
 		\item[S] O dispositivo é substituível
 	\end{ekey}
 A sentença \ref{not4} agora pode ser simbolizada por:
 $$S$$
-Repare que a sentença da chave de simbolização é ligeiramente diferente de \ref{not4}, mas é evidente que elas têm o mesmo significado, afinal ser substituível é poder ser substituído.
+Repare que a sentença do esquema de simbolização é ligeiramente diferente de \ref{not4}, mas é evidente que elas têm o mesmo significado, afinal ser substituível é poder ser substituído.
 Passando para a sentença \ref{not5}, dizer que o dispositivo é insubstituível significa que não é o caso que o dispositivo é substituível.
 Portanto, mesmo que a sentença \ref{not5} não contenha a palavra `não', nós a simbolizaremos da seguinte forma: $$\enot S$$
 A sentença \ref{not5b} pode ser parafraseada como `Não é o caso que o dispositivo seja insubstituível.'
@@ -246,7 +246,7 @@ Mas é necessário termos cuidado quando lidamos com negações. Considere:
 		\item[\ex{not6}] Glória está feliz.
 		\item[\ex{not7}] Glória está infeliz.
 	\end{earg}
-Se usamos como chave de simbolização
+Se usamos como esquema de simbolização
 	\begin{ekey}
 		\item[F] Glória está feliz
 	\end{ekey}
@@ -280,7 +280,7 @@ Considere estas sentenças:
 		\item[\ex{and3}]Suzana é atleta e, além disso, Bárbara é artista.
 	\end{earg}
 Precisamos de duas letras sentenciais diferentes para simbolizar as sentenças \ref{and1} e \ref{and2}.
-Nossa chave de simbolização pode ser:
+Nosso esquema de simbolização pode ser:
 	\begin{ekey}
 		\item[S] Suzana é atleta.
 		\item[B] Bárbara é artista.
@@ -325,7 +325,7 @@ Mais alguns exemplos ajudarão a esclarecer um pouco mais esse ponto:
 A sentença \ref{and4} é obviamente uma conjunção.
 Ela diz duas coisas (sobre Suzana).
 Em português é permitido dizer as duas coisas mencionando o nome Suzana apenas uma vez.
-Como definimos acima a chave de simbolização 
+Como definimos acima o esquema de simbolização 
 	\begin{ekey}
 		\item[S] Suzana é atleta.
 	\end{ekey}
@@ -334,13 +334,13 @@ Mas isso seria um erro.
 `Canhota' não é uma sentença completa do português.
 Não poderíamos simbolizar `canhota' como uma letra sentencial.
 O que estamos buscando é algo como `$S$ e Suzana é canhota'.
-Portanto, precisamos adicionar outra letra sentencial à chave de simbolização. Utilizemos `$C$' para simbolizar 'Suzana é canhota'.
+Portanto, precisamos adicionar outra letra sentencial ao esquema de simbolização. Utilizemos `$C$' para simbolizar 'Suzana é canhota'.
 Agora a sentença inteira pode ser simbolizada como:
 $$(S \eand C)$$	
 A sentença \ref{and5} diz uma única coisa de duas pessoas diferentes, ou seja, atribui um predicado único a dois sujeitos.
 Diz tanto de Bárbara como de Renata que elas são saxofonistas, ainda que em português tenhamos usado a palavra ``saxofonista'' apenas uma vez.
 A sentença \ref{and5} pode claramente ser parafraseada como `Bárbara é saxofonista e Renata é saxofonista'.
-Podemos então usar a seguinte chave
+Podemos então usar o seguinte esquema
 	\begin{ekey}
 		\item[B_1] Bárbara é saxofonista.
 		\item[R] Renata é saxofonista.
@@ -353,7 +353,7 @@ No entanto, a sentença nos diz que Bárbara é saxofonista e que ela não é ca
 Para fazer com que cada um dos conjuntos (sentenças que compõe uma conjunção) seja uma letra sentencial, precisamos substituir ``ela'' por ``Bárbara''.
 Portanto, podemos parafrasear a frase \ref{and6} como: `Bárbara é saxofonista \emph{e} Bárbara não é canhota'.
 O segundo conjunto contém uma negação, então parafraseando mais uma vez, chegamos a: `Bárbara é saxofonista \emph{e} \emph{não é o caso que} Bárbara é canhota'.
-Como já propusemos a chave de que $B_1$ simboliza ``Bárbara é saxofonista'', então completamos nossa chave de simbolização com mais uma letra sentencial:
+Como já propusemos o esquema de que $B_1$ simboliza ``Bárbara é saxofonista'', então completamos nosso esquema de simbolização com mais uma letra sentencial:
 	\begin{ekey}
 		\item[C_1] Bárbara é canhota.
 	\end{ekey}
@@ -367,14 +367,14 @@ A sentença \ref{and7} levanta questões semelhantes.
 Existe um claro contraste entre o que é dito de Romeu com o que é dito de Bárbara, mas isso não é algo com o qual a LVF consiga lidar.
 Assim, podemos parafrasear \ref{and7} como `Romeu é compreensivo \emph{e} Bárbara é mais compreensiva que Romeu'.
 (Observe que mais uma vez substituímos, em nossa paráfrase, um pronome [ele] por um nome [Romeu].)
-Considere a seguinte chave de simbolização:
+Considere o seguinte esquema de simbolização:
 	\begin{ekey}
 		\item[R_1] Romeu é compreensivo.
 		\item[B_2] Bárbara é compreensiva.
 	\end{ekey}
 Para simbolizar o primeiro conjunto da paráfrase acima, `$R_1$' basta.
 Mas como devemos simbolizar o segundo conjunto? O que diz: `Bárbara é mais compreensiva que Romeu'?
-Não tem como dizer que Bárbara é \emph{mais} compreensiva que Romeu usando esta chave.
+Não tem como dizer que Bárbara é \emph{mais} compreensiva que Romeu usando este esquema.
 Precisamos de uma nova letra sentencial para simbolizar `Bárbara é mais compreensiva que Romeu'. Seja `$M_1$' esta letra.
 Podemos agora simbolizar a sentença \ref{and7} como:
 $$(R_1 \eand M_1)$$
@@ -390,7 +390,7 @@ Considere:
 		\item[\ex{negcon2}] Você não beberá refrigerante, mas beberá suco.
 	\end{earg}
 A sentença \ref{negcon1} pode ser parafraseada como `Não é o caso que: você beberá refrigerante e você beberá suco'.
-Usando esta chave de simbolização
+Usando este esquema de simbolização
 	\begin{ekey}
 		\item[S_1] Você beberá refrigerante.
 		\item[S_2] Você beberá suco.
@@ -400,7 +400,7 @@ Então, para simbolizar \ref{negcon1}, nós simplesmente negamos esta sentença 
 $$\enot(S_1 \eand S_2)$$
 A sentença \ref{negcon2} é uma conjunção:
 você \emph{não} beberá refrigerante e você \emph{beberá} suco.
-Dada a chave de simbolização recém proposta, simbolizamos `Você não beberá refrigerante' como `$\enot S_1$' e `Você beberá suco' como `$S_2$.
+Dado o esquema de simbolização recém proposto, simbolizamos `Você não beberá refrigerante' como `$\enot S_1$' e `Você beberá suco' como `$S_2$.
 Então, a sentença \ref{negcon2} é simbolizada como:
 $$(\enot S_1 \eand S_2)$$
 As sentenças \ref{negcon1} e \ref{negcon2} têm, em português, significados muito diferentes e por isso suas simbolizações têm que ser também diferentes.
@@ -418,7 +418,7 @@ Considere as seguintes sentenças:
 		\item[\ex{or1}]Fátima vai jogar videogame ou ela vai assistir TV.
 		\item[\ex{or2}]Fátima ou Omar vão jogar videogame. 
 	\end{earg}
-Podemos, para estas sentenças, usar a seguinte chave de simbolização:
+Podemos, para estas sentenças, usar o seguinte esquema de simbolização:
 	\begin{ekey}
 		\item[F] Fátima vai jogar videogame.
 		\item[O] Omar vai jogar videogame.
@@ -472,7 +472,7 @@ Vejamos como a negação interage com a disjunção. Considere:
 		\item[\ex{or.xor}] Você beberá refrigerante ou suco, mas não ambos.
 	\end{earg}
 
-Usando a mesma chave de simbolização apresentada anteriormente,
+Usando o mesma esquema de simbolização apresentado anteriormente,
 	\begin{ekey}
 		\item[S_1] Você beberá refrigerante.
 		\item[S_2] Você beberá suco.
@@ -515,7 +515,7 @@ Considere as seguintes sentenças:
 		\item[\ex{if1}] Se Oscar está em Caicó, então Oscar está no Rio Grande do Norte.
 		\item[\ex{if2}] Oscar está no Rio Grande do Norte apenas se Oscar está em Caicó.
 	\end{earg}
-Vamos usar a seguinte chave de simbolização:
+Vamos usar o seguinte esquema de simbolização:
 	\begin{ekey}
 		\item[C] Oscar está em Caicó.
 		\item[R] Oscar está no Rio Grande do Norte.
@@ -587,7 +587,7 @@ Considere as sentenças:
 		\item[\ex{iff2}] Olavo é um asno se ele for um mamífero.
 		\item[\ex{iff3}] Olavo é um asno se e somente se ele for um mamífero.
 	\end{earg}
-Usaremos a seguinte chave de simbolização:
+Usaremos o seguinte esquema de simbolização:
 	\begin{ekey}
 		\item[A_3] Olavo é um asno.
 		\item[M_3] Olavo é um mamífero.
@@ -678,7 +678,7 @@ Um caso especialmente difícil é o de sentenças com as expressões sinônimas 
 \item[\ex{unless2}] Você terá uma insolação a menos que você saia do sol.
 \end{earg}
 Estas duas sentenças são claramente equivalentes.
-Para simbolizá-las usaremos a seguinte chave:
+Para simbolizá-las usaremos o seguinte esquema:
 	\begin{ekey}
 		\item[S] Você sairá do sol.
 		\item[I] Você terá uma insolação.
@@ -714,7 +714,7 @@ Então, aqui também a moral da história é que temos que estar cientes destes 
 
 \practiceproblems
 \solutions
-\problempart Usando a chave a seguir, simbolize cada uma das 6 sentenças abaixo na LVF.\label{pr.monkeysuits}
+\problempart Usando o esquema a seguir, simbolize cada uma das 6 sentenças abaixo na LVF.\label{pr.monkeysuits}
 	\begin{ekey}
 		\item[H] Essas criaturas são homens de terno. 
 		\item[C] Essas criaturas são chimpanzés.
@@ -729,7 +729,7 @@ Então, aqui também a moral da história é que temos que estar cientes destes 
 	\item A menos que essas criaturas sejam homens de terno, elas são chimpanzés ou gorilas.
 \end{earg}
 
-\problempart Usando a chave a seguir, simbolize cada uma das 12 sentenças abaixo na LVF.
+\problempart Usando o esquema a seguir, simbolize cada uma das 12 sentenças abaixo na LVF.
 \begin{ekey}
 	\item[A] O Sr. Abel foi assassinado.
 	\item[B] Foi a babá.
@@ -754,7 +754,7 @@ Então, aqui também a moral da história é que temos que estar cientes destes 
 \end{earg}
 \solutions
 
-\problempart Usando a chave a seguir, simbolize cada uma das 12 sentenças abaixo na LVF.\label{pr.avacareer}
+\problempart Usando o esquema a seguir, simbolize cada uma das 12 sentenças abaixo na LVF.\label{pr.avacareer}
 	\begin{ekey}
 		\item[E_1] Aline é eletricista.
 		\item[E_2] Helena é eletricista.
@@ -779,7 +779,7 @@ Então, aqui também a moral da história é que temos que estar cientes destes 
 	\end{earg}
 
 \problempart
-Usando a chave a seguir, simbolize cada uma das 9 sentenças abaixo na LVF.
+Usando o esquema a seguir, simbolize cada uma das 9 sentenças abaixo na LVF.
 \label{pr.jazzinstruments}
 \begin{ekey}
 	\item[J_1] John Coltrane tocava sax tenor.
@@ -804,7 +804,7 @@ Usando a chave a seguir, simbolize cada uma das 9 sentenças abaixo na LVF.
 \solutions
 \problempart
 \label{pr.spies}
-Proponha uma chave de simbolização e utilize-a para simbolizar  cada uma das 6 sentenças abaixo na LVF.
+Proponha um esquema de simbolização e utilize-o para simbolizar  cada uma das 6 sentenças abaixo na LVF.
 \begin{earg}
 	\item Amália e Betina são espiãs.
 	\item Se Amália ou Betina são espiãs, então o código foi quebrado.
@@ -815,7 +815,7 @@ Proponha uma chave de simbolização e utilize-a para simbolizar  cada uma das 6
 \end{earg}
 
 \solutions
-\problempart Proponha uma chave de simbolização e utilize-a para simbolizar  cada uma das 5 sentenças abaixo na LVF.
+\problempart Proponha um esquema de simbolização e utilize-o para simbolizar  cada uma das 5 sentenças abaixo na LVF.
 \begin{earg}
 	\item Se não houver álcool gel na dispensa, então Celso sairá de casa na quarentena.
 	\item Celso sairá de casa na quarentena, a menos que haja álcool gel na dispensa.
@@ -825,7 +825,7 @@ Proponha uma chave de simbolização e utilize-a para simbolizar  cada uma das 6
 \end{earg}
 
 \problempart
-Para cada um dos 3 argumentos abaixo, identifique sua conclusão e suas premissas, proponha uma chave de simbolização e use-a para simbolizar todas as sentenças do argumento na LVF.
+Para cada um dos 3 argumentos abaixo, identifique sua conclusão e suas premissas, proponha um esquema de simbolização e use-o para simbolizar todas as sentenças do argumento na LVF.
 \begin{earg}
 	\item Se Danina toca piano de manhã, então Richard acorda irritadiço. Danina toca piano de manhã, a menos que esteja distraída. Portanto, se Richard não acorda irritadiço, Danina deve estar distraída.
 	\item Vai chover ou ventar forte na terça-feira. Se chover, Natália ficará triste. Se ventar forte, Natália ficará descabelada. Portanto, Natália ficará triste ou descabelada na terça-feira.
@@ -833,7 +833,7 @@ Para cada um dos 3 argumentos abaixo, identifique sua conclusão e suas premissa
 \end{earg}
 
 \problempart
-Para cada um dos três argumentos abaixo, identifique sua conclusão e suas premissas, proponha uma chave de simbolização e utilize-a para simbolizar o  argumento da melhor maneira possível na LVF.
+Para cada um dos três argumentos abaixo, identifique sua conclusão e suas premissas, proponha um esquema de simbolização e utilize-o para simbolizar o  argumento da melhor maneira possível na LVF.
 Os trechos em \emph{itálico} apenas ajudam a fornecer um contexto para a melhor interpretação do argumento e não precisam ser simbolizados.
 \begin{earg}
 \item Vai chover em breve. Eu sei porque minha perna está doendo, e minha perna dói se vai chover.
